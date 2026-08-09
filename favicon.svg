@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bear face icon">
-  <rect width="64" height="64" rx="12" fill="#26332f"/>
-  <circle cx="17" cy="19" r="10" fill="#e7a7a9"/>
-  <circle cx="47" cy="19" r="10" fill="#e7a7a9"/>
-  <circle cx="17" cy="19" r="5" fill="#8b2f39"/>
-  <circle cx="47" cy="19" r="5" fill="#8b2f39"/>
-  <circle cx="32" cy="34" r="24" fill="#fffdfa"/>
-  <circle cx="24" cy="31" r="2.6" fill="#1e2523"/>
-  <circle cx="40" cy="31" r="2.6" fill="#1e2523"/>
-  <ellipse cx="32" cy="40" rx="9" ry="7" fill="#eef2ec"/>
-  <path d="M28.5 38.5Q32 35.5 35.5 38.5Q35 42 32 42Q29 42 28.5 38.5Z" fill="#8b2f39"/>
-  <path d="M32 42v2.5M32 44.5q-2.5 5-6 1.5M32 44.5q2.5 5 6 1.5" fill="none" stroke="#1e2523" stroke-width="1.7" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bear kaomoji icon">
+  <rect width="64" height="64" rx="3" fill="#ffffff"/>
+  <text
+    x="32"
+    y="38"
+    fill="#111111"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="16"
+    font-weight="700"
+    text-anchor="middle"
+  >ʕ •ᴥ•ʔ</text>
 </svg>

@@ -349,6 +349,36 @@ dd {
   font-size: 1.15rem;
 }
 
+.dog-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.dog-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.dog-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.dog-card figcaption {
+  margin-top: 0.55rem;
+  color: var(--foreground);
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 .intro-band .section-kicker {
   margin: 0;
 }
@@ -630,6 +660,10 @@ dd {
 
   .portrait-area img {
     width: 180px;
+  }
+
+  .dog-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .page-links {

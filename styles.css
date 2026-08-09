@@ -608,7 +608,8 @@ dd {
   gap: 1rem;
 }
 
-.activity-group-body {
+.activity-group-body,
+.teaching-group-body {
   padding: 1rem;
   background: var(--band-bg);
 }

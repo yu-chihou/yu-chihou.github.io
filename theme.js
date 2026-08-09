@@ -4,6 +4,16 @@
   const button = document.querySelector(".theme-toggle");
   const themeMeta = document.querySelector('meta[name="theme-color"]');
 
+  document.querySelectorAll("a[href]").forEach((link) => {
+    link.target = "_blank";
+    const relValues = new Set(
+      (link.getAttribute("rel") || "").split(/\s+/).filter(Boolean)
+    );
+    relValues.add("noopener");
+    relValues.add("noreferrer");
+    link.setAttribute("rel", [...relValues].join(" "));
+  });
+
   if (!button) return;
 
   const getSavedTheme = () => {

@@ -5,7 +5,24 @@
   const themeMeta = document.querySelector('meta[name="theme-color"]');
 
   document.querySelectorAll("a[href]").forEach((link) => {
-    if (link.matches(".site-header nav a")) return;
+    const href = link.getAttribute("href");
+
+    if (!href) return;
+
+    let destination;
+
+    try {
+      destination = new URL(href, window.location.href);
+    } catch {
+      return;
+    }
+
+    const isExternalHttp =
+      (destination.protocol === "http:" ||
+        destination.protocol === "https:") &&
+      destination.origin !== window.location.origin;
+
+    if (!isExternalHttp) return;
 
     link.target = "_blank";
     const relValues = new Set(

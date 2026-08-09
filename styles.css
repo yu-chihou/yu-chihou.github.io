@@ -405,6 +405,11 @@ dd {
   margin: 0;
 }
 
+.intro-band .section-kicker,
+.useful-links-section .section-kicker {
+  font-size: 1.05rem;
+}
+
 .useful-links-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

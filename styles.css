@@ -454,6 +454,9 @@ a.useful-link-card:hover {
 }
 
 .arxiv-card {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 0.8rem;
   justify-content: space-between;
 }

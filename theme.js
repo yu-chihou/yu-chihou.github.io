@@ -5,6 +5,8 @@
   const themeMeta = document.querySelector('meta[name="theme-color"]');
 
   document.querySelectorAll("a[href]").forEach((link) => {
+    if (link.matches(".site-header nav a")) return;
+
     link.target = "_blank";
     const relValues = new Set(
       (link.getAttribute("rel") || "").split(/\s+/).filter(Boolean)

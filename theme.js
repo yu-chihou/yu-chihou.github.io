@@ -38,6 +38,7 @@
     button.title = isDark ? "Switch to light mode" : "Switch to dark mode";
     icon.textContent = isDark ? "☀︎" : "☾";
     icon.style.color = isDark ? "#f6f6f1" : "";
+    icon.style.fontSize = isDark ? "1.25rem" : "";
     if (themeMeta) themeMeta.content = isDark ? "#171b1e" : "#f6f6f1";
 
     if (persist) {

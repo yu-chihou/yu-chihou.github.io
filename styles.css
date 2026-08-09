@@ -4,8 +4,8 @@
   --paper: #fffdfa;
   --muted: #69736f;
   --rule: #d8ddd4;
-  --accent: #8b2f39;
-  --accent-dark: #641d27;
+  --accent: #5e7c91;
+  --accent-dark: #263b50;
   --blue: #2f6173;
   --green: #66784b;
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -510,7 +510,7 @@ dd {
 
 .site-footer {
   border-top: 1px solid var(--foreground);
-  background: #26332f;
+  background: #263b50;
   color: #fffdfa;
 }
 

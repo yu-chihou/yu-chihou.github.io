@@ -55,3 +55,46 @@
   search.addEventListener("search", filterDirectory);
   filterDirectory();
 })();
+
+(() => {
+  const button = document.querySelector(".scroll-to-top");
+
+  if (!button) {
+    return;
+  }
+
+  let ticking = false;
+
+  const updateVisibility = () => {
+    const visible = window.scrollY > 480;
+    button.classList.toggle("is-visible", visible);
+    button.setAttribute("aria-hidden", String(!visible));
+    button.tabIndex = visible ? 0 : -1;
+  };
+
+  const handleScroll = () => {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      updateVisibility();
+      ticking = false;
+    });
+  };
+
+  button.addEventListener("click", () => {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: reduceMotion ? "auto" : "smooth",
+    });
+  });
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  updateVisibility();
+})();

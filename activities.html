@@ -8,8 +8,22 @@
       content="Talks, seminars, mentoring, and service by Yu-Chi Hou."
     />
     <meta name="theme-color" content="#f6f6f1" />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("yu-theme");
+          const systemDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+          document.documentElement.dataset.theme =
+            savedTheme || (systemDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
     <title>Activities | Yu-Chi Hou</title>
-    <link rel="stylesheet" href="styles.css?v=20260809-3" />
+    <link rel="stylesheet" href="styles.css?v=20260809-5" />
   </head>
   <body>
     <header class="site-header">
@@ -20,6 +34,15 @@
           <a href="research.html">Research</a>
           <a href="activities.html" aria-current="page">Activities</a>
           <a href="teaching.html">Teaching</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            title="Change theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          </button>
         </nav>
       </div>
     </header>
@@ -71,5 +94,6 @@
       </section>
     </main>
 
+    <script src="theme.js?v=20260809" defer></script>
   </body>
 </html>

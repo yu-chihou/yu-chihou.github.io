@@ -338,7 +338,12 @@ dd {
   gap: clamp(1.75rem, 5vw, 4rem);
 }
 
-.section-grid p:last-child {
+.personal-interests {
+  display: grid;
+  gap: 1rem;
+}
+
+.personal-interests p {
   margin: 0;
   color: var(--body-copy);
   font-size: 1.15rem;

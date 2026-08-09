@@ -26,9 +26,9 @@
     <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml" />
     <link rel="icon" href="favicon-32.png?v=4" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png?v=4" sizes="180x180" />
-    <link rel="stylesheet" href="styles.css?v=20260809-26" />
+    <link rel="stylesheet" href="styles.css?v=20260809-27" />
   </head>
-  <body id="top">
+  <body>
     <header class="site-header">
       <div class="site-header-inner">
         <div class="header-tools">
@@ -891,13 +891,21 @@
           No matching names.
         </p>
 
-        <p class="directory-back-to-top">
-          <a href="#top">Back to top ↑</a>
-        </p>
       </section>
     </main>
 
-    <script src="directory.js?v=20260809-1" defer></script>
+    <button
+      class="scroll-to-top"
+      type="button"
+      aria-label="Back to top"
+      title="Back to top"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="directory.js?v=20260809-2" defer></script>
     <script src="theme.js?v=20260809-5" defer></script>
   </body>
 </html>

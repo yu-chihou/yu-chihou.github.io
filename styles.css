@@ -232,6 +232,10 @@ nav a[aria-current="page"] {
   gap: 1.25rem;
 }
 
+.portrait-area .quick-links {
+  margin-top: 0;
+}
+
 .portrait-area img {
   width: min(220px, 70vw);
   height: auto;

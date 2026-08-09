@@ -524,7 +524,7 @@ dd {
 .dog-poll iframe {
   display: block;
   width: 100%;
-  height: 520px;
+  height: 444px;
   border: 0;
   border-radius: 6px;
   background: #fff;
@@ -929,5 +929,9 @@ dd {
   .activity-list li {
     grid-template-columns: 1fr;
     gap: 0.45rem;
+  }
+
+  .dog-poll iframe {
+    height: 480px;
   }
 }

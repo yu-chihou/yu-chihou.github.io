@@ -507,6 +507,13 @@ a.useful-link-card:hover {
   white-space: nowrap;
 }
 
+.directory-intro {
+  width: min(960px, 100%);
+  margin: 0 0 1.5rem;
+  color: var(--body-copy);
+  font-size: 1.05rem;
+}
+
 .directory-tools {
   display: grid;
   width: min(960px, 100%);

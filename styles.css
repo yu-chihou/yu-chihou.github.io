@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --background: #f6f6f1;
   --foreground: #1e2523;
   --paper: #fffdfa;
@@ -8,9 +9,30 @@
   --accent-dark: #263b50;
   --blue: #2f6173;
   --green: #66784b;
+  --header-bg: rgba(255, 253, 250, 0.95);
+  --band-bg: #eef2ec;
+  --body-copy: #3c4643;
+  --hover-bg: #fff7f2;
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #171b1e;
+  --foreground: #eef2f3;
+  --paper: #20262a;
+  --muted: #aab5ba;
+  --rule: #3b474d;
+  --accent: #83a9be;
+  --accent-dark: #b7d0de;
+  --blue: #8db6c8;
+  --green: #a8b98b;
+  --header-bg: rgba(23, 27, 30, 0.95);
+  --band-bg: #1b2225;
+  --body-copy: #d2dadd;
+  --hover-bg: #263138;
 }
 
 * {
@@ -76,7 +98,7 @@ h3 {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--rule);
-  background: rgba(255, 253, 250, 0.95);
+  background: var(--header-bg);
   backdrop-filter: blur(16px);
 }
 
@@ -127,6 +149,36 @@ nav a[aria-current="page"] {
   border-bottom-color: var(--accent);
   color: var(--foreground);
   font-weight: 700;
+}
+
+.theme-toggle {
+  display: inline-grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--foreground);
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  background: var(--hover-bg);
+  color: var(--accent-dark);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(94, 124, 145, 0.45);
+  outline-offset: 3px;
+}
+
+.theme-toggle-icon {
+  line-height: 1;
 }
 
 .hero {
@@ -191,7 +243,7 @@ nav a[aria-current="page"] {
 .lead {
   max-width: 66ch;
   margin: 2rem 0 0;
-  color: #34413e;
+  color: var(--body-copy);
   font-size: 1.18rem;
 }
 
@@ -228,7 +280,7 @@ nav a[aria-current="page"] {
 .quick-links a:hover,
 .contact-links a:hover {
   border-color: var(--accent);
-  background: #fff7f2;
+  background: var(--hover-bg);
 }
 
 .portrait-area {
@@ -276,7 +328,7 @@ dd {
 
 .intro-band {
   border-bottom: 1px solid var(--rule);
-  background: #eef2ec;
+  background: var(--band-bg);
   padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 3vw, 2.75rem);
 }
 
@@ -288,7 +340,7 @@ dd {
 
 .section-grid p:last-child {
   margin: 0;
-  color: #3c4643;
+  color: var(--body-copy);
   font-size: 1.15rem;
 }
 
@@ -339,7 +391,7 @@ dd {
 
 .page-links article > p:not(.page-number) {
   margin: 0.85rem 0 1.5rem;
-  color: #3c4643;
+  color: var(--body-copy);
 }
 
 .page-number {
@@ -388,7 +440,7 @@ dd {
 
 .page-summary {
   margin: 0;
-  color: #3c4643;
+  color: var(--body-copy);
   font-size: 1.08rem;
 }
 
@@ -409,7 +461,7 @@ dd {
 
 .research-card > p {
   margin: 0;
-  color: #3c4643;
+  color: var(--body-copy);
 }
 
 .research-card div > p {
@@ -480,7 +532,7 @@ dd {
 
 .service-list p {
   margin: 0;
-  color: #3c4643;
+  color: var(--body-copy);
 }
 
 .teaching-table {
@@ -508,8 +560,8 @@ dd {
 }
 
 .teaching-header {
-  background: #eef2ec;
-  color: #465148;
+  background: var(--band-bg);
+  color: var(--body-copy);
   font-family: var(--mono);
   font-size: 0.75rem;
   text-transform: uppercase;

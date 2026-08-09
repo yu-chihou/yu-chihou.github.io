@@ -283,6 +283,7 @@ dd {
   gap: clamp(1.75rem, 5vw, 4rem);
 }
 
+.research-summary,
 .section-grid p:last-child {
   margin: 0;
   color: #3c4643;

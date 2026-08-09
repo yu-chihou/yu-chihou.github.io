@@ -289,7 +289,19 @@ nav a[aria-current="page"] {
 }
 
 .portrait-area .quick-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 0;
+}
+
+.portrait-area .quick-links a {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.portrait-area .quick-links .quick-link-wide {
+  grid-column: 1 / -1;
 }
 
 .portrait-area img {

@@ -28,6 +28,7 @@
 
   const applyTheme = (theme, persist = false) => {
     const isDark = theme === "dark";
+    const icon = button.querySelector(".theme-toggle-icon");
     root.dataset.theme = isDark ? "dark" : "light";
     button.setAttribute("aria-pressed", String(isDark));
     button.setAttribute(
@@ -35,7 +36,8 @@
       isDark ? "Switch to light mode" : "Switch to dark mode"
     );
     button.title = isDark ? "Switch to light mode" : "Switch to dark mode";
-    button.querySelector(".theme-toggle-icon").textContent = isDark ? "☀" : "☾";
+    icon.textContent = isDark ? "☀︎" : "☾";
+    icon.style.color = isDark ? "#f6f6f1" : "";
     if (themeMeta) themeMeta.content = isDark ? "#171b1e" : "#f6f6f1";
 
     if (persist) {

@@ -708,9 +708,15 @@ a.useful-link-card:hover {
 }
 
 .activity-group-body,
-.teaching-group-body {
+.teaching-group-body,
+.misc-group-body {
   padding: 1rem;
   background: var(--band-bg);
+}
+
+.misc-group-body p {
+  margin: 0;
+  color: var(--body-copy);
 }
 
 .activity-list {

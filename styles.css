@@ -674,6 +674,26 @@ a.useful-link-card:hover {
   text-align: center;
 }
 
+.directory-back-to-top {
+  width: min(960px, 100%);
+  margin: 2.25rem 0 0;
+  text-align: right;
+}
+
+.directory-back-to-top a {
+  color: var(--accent-dark);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.directory-back-to-top a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .directory-group[hidden],
 .directory-index a[hidden],
 .directory-empty[hidden] {

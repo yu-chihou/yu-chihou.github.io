@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Mathematician websites followed by Yu-Chi Hou."
+    />
+    <meta name="theme-color" content="#f6f6f1" />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("yu-theme");
+          const systemDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+          document.documentElement.dataset.theme =
+            savedTheme || (systemDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <title>Mathematicians | Yu-Chi Hou</title>
+    <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml" />
+    <link rel="icon" href="favicon-32.png?v=4" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=4" sizes="180x180" />
+    <link rel="stylesheet" href="styles.css?v=20260809-23" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="header-tools">
+          <a
+            class="brand"
+            href="index.html"
+            aria-label="Yu-Chi Hou home"
+            title="Home"
+          >
+            <img
+              src="apple-touch-icon.png?v=4"
+              alt=""
+              width="38"
+              height="38"
+            />
+          </a>
+          <button
+            class="theme-toggle"
+            type="button"
+            title="Change theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          </button>
+        </div>
+        <nav aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="research.html">Research</a>
+          <a href="activities.html">Activities</a>
+          <a href="misc.html">Misc</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div class="page-intro-inner">
+          <h1>Mathematicians</h1>
+        </div>
+      </section>
+
+      <section class="content-section" aria-label="Mathematician websites">
+        <ul class="people-directory">
+          <li>
+            <a href="http://www.math.umd.edu/~tdarvas/" target="_blank" rel="noopener">
+              Tamás Darvas
+            </a>
+          </li>
+          <li>
+            <a href="http://www.math.ntu.edu.tw/~dragon/" target="_blank" rel="noopener">
+              Chin-Lung Wang
+            </a>
+          </li>
+          <li>
+            <a href="https://www.dancristofarogardiner.com/" target="_blank" rel="noopener">
+              Daniel Cristofaro-Gardiner
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="theme.js?v=20260809-3" defer></script>
+  </body>
+</html>

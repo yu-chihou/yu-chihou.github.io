@@ -485,6 +485,61 @@ a.useful-link-card:hover {
   background: var(--hover-bg);
 }
 
+.directory-link-card {
+  grid-column: 1 / -1;
+  min-height: 4rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.directory-link-card span {
+  color: var(--accent-dark);
+  font-size: 1.2rem;
+}
+
+.people-directory {
+  display: grid;
+  width: min(760px, 100%);
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--paper);
+  padding: 0;
+  list-style: none;
+}
+
+.people-directory li + li {
+  border-top: 1px solid var(--rule);
+}
+
+.people-directory a {
+  display: flex;
+  min-height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  color: var(--foreground);
+  font-size: 1.08rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.people-directory a::after {
+  content: "↗";
+  flex: 0 0 auto;
+  color: var(--accent-dark);
+  font-family: var(--mono);
+  font-weight: 500;
+}
+
+.people-directory a:hover {
+  background: var(--hover-bg);
+  color: var(--accent-dark);
+}
+
 .content-section {
   padding: clamp(3rem, 6vw, 5.5rem) clamp(1rem, 3vw, 2.75rem);
 }

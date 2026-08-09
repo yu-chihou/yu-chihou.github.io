@@ -1,0 +1,211 @@
+eval export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+fpath[1,0]="/opt/homebrew/share/zsh/site-functions";
+export FPATH;
+eval "$(/usr/bin/env PATH_HELPER_ROOT="/opt/homebrew" /usr/libexec/path_helper -s)"
+[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+eval export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+fpath[1,0]="/opt/homebrew/share/zsh/site-functions";
+export FPATH;
+eval "$(/usr/bin/env PATH_HELPER_ROOT="/opt/homebrew" /usr/libexec/path_helper -s)"
+[ -z "${MANPATH-}" ] || export MANPATH=":${MANPATH#:}";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Yu-Chi Hou, Ph.D. student in mathematics at the University of Maryland, College Park."
+    />
+    <meta name="theme-color" content="#f6f6f1" />
+    <title>Yu-Chi Hou | Mathematics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Yu-Chi Hou home">YH</a>
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#talks">Talks</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Mathematics | geometric analysis</p>
+            <h1>Yu-Chi Hou <span lang="zh-Hant">侯侑期</span></h1>
+            <p class="lead">
+              I am a Ph.D. student in mathematics at the University of
+              Maryland, College Park, advised by Tamás Darvas. My research lies
+              around geometric analysis, complex geometry, algebraic geometry,
+              canonical Kähler metrics, pluripotential theory, and Kähler
+              quantization in degenerate settings.
+            </p>
+            <div class="quick-links" aria-label="Profile links">
+              <a href="https://www.dropbox.com/scl/fi/klxlspqgtfllzrzn8s0vo/CV.pdf?dl=0&amp;rlkey=v5fhq5ez9csjc6purqq7i56fq">CV</a>
+              <a href="https://orcid.org/0000-0002-7919-1692">ORCID</a>
+              <a href="https://www.researchgate.net/profile/Yu-Chi-Hou-2">ResearchGate</a>
+              <a href="https://github.com/yu-chihou">GitHub</a>
+              <a href="https://sites.google.com/view/yuchi-hou">Google Sites archive</a>
+            </div>
+          </div>
+
+          <aside class="portrait-area" aria-label="Profile summary">
+            <img
+              src="https://avatars.githubusercontent.com/u/54302939?v=4"
+              alt="Yu-Chi Hou"
+              width="220"
+              height="220"
+            />
+            <dl>
+              <div>
+                <dt>Also known as</dt>
+                <dd>Cory</dd>
+              </div>
+              <div>
+                <dt>Affiliation</dt>
+                <dd>Department of Mathematics, UMD</dd>
+              </div>
+              <div>
+                <dt>CV</dt>
+                <dd>Updated March 16, 2026</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="intro-band">
+        <div class="section-grid">
+          <div>
+            <p class="section-kicker">About</p>
+            <h2>Complex geometry, analysis, and a few carefully kept lists.</h2>
+          </div>
+          <p>
+            Outside mathematics I follow football, especially FC Barcelona and
+            Manchester City, and keep records of films, anime, live
+            performances, and games. This site keeps the academic material
+            close at hand while leaving a small trace of those side interests.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section" id="research">
+        <div class="section-title">
+          <p class="section-kicker">Research</p>
+          <h2>Publications and notes</h2>
+        </div>
+        <div class="research-list">
+          <article class="research-card">
+            <div>
+              <p>Preprint, arXiv:2512.11523, submitted</p>
+              <h3>
+                <a href="https://arxiv.org/abs/2512.11523">Quantization for Semipositive Adjoint Line Bundles</a>
+              </h3>
+            </div>
+            <p>
+              Studies Donaldson's quantized Monge-Ampere energy in the big and
+              semipositive adjoint setting, using non-pluripolar Monge-Ampere
+              theory and adjoint Bergman kernels.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div>
+              <p>Bull. Inst. Math. Acad. Sin. (N.S.) 17 (2022), no. 1, 1-51</p>
+              <h3>
+                <a href="https://arxiv.org/abs/2202.03383">Asymptotic of Bergman Kernel</a>
+              </h3>
+            </div>
+            <p>
+              A proof of pointwise asymptotic expansion for Bergman kernels on
+              the positive part of certain semi-positive line bundles, based on
+              semi-classical symbolic calculus.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div>
+              <p>Research note</p>
+              <h3>
+                <a href="https://sites.google.com/view/yuchi-hou/research">Localization on P<sup>2</sup></a>
+              </h3>
+            </div>
+            <p>
+              Notes from a localization calculation in Gromov-Witten theory,
+              developed as part of a MoST research assistant report.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section compact" id="talks">
+        <div class="section-title">
+          <p class="section-kicker">Activities</p>
+          <h2>Talks and seminars</h2>
+        </div>
+        <ol class="timeline">
+          <li>May 2026, Informal Geometric Seminar, UMD, Maryland</li>
+          <li>March 2026, CIRGET Seminar, UQAM, Montreal</li>
+          <li>February 2026, Any Complex Geometry Seminar, online</li>
+          <li>January 2026, Seminar in Complex Geometry, NTU, Taipei</li>
+        </ol>
+        <div class="service-note">
+          <p>
+            I organized a student seminar on toric geometry at UMD in Spring
+            2023 and have helped organize the UMD student complex geometry
+            seminar since Fall 2023.
+          </p>
+          <p>
+            I also served as a mentor and committee member for the UMD Directed
+            Reading Program in Spring 2023.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section" id="teaching">
+        <div class="section-title">
+          <p class="section-kicker">Teaching</p>
+          <h2>Recent teaching and grading</h2>
+        </div>
+        <div class="teaching-table" role="table" aria-label="Teaching history">
+          <div class="teaching-row" role="row"><span role="cell">2026 Spring</span><strong role="cell">Math 403 grader and Math 437 grader</strong><span role="cell">UMD</span></div>
+          <div class="teaching-row" role="row"><span role="cell">2025 Fall</span><strong role="cell">Math 121 TA</strong><span role="cell">UMD</span></div>
+          <div class="teaching-row" role="row"><span role="cell">2024 Fall</span><strong role="cell">Math 121 TA</strong><span role="cell">UMD</span></div>
+          <div class="teaching-row" role="row"><span role="cell">2024 Spring</span><strong role="cell">Math 660 grader and Math 437 grader</strong><span role="cell">UMD</span></div>
+          <div class="teaching-row" role="row"><span role="cell">2023 Fall</span><strong role="cell">Stat 100 TA</strong><span role="cell">UMD</span></div>
+          <div class="teaching-row" role="row"><span role="cell">2023 Spring</span><strong role="cell">Math 115 TA</strong><span role="cell">UMD</span></div>
+          <div class="teaching-row" role="row"><span role="cell">2022 Fall</span><strong role="cell">Math 115 TA</strong><span role="cell">UMD</span></div>
+          <div class="teaching-row" role="row"><span role="cell">2021 Spring</span><strong role="cell">Differential Geometry II</strong><span role="cell">NTU</span></div>
+          <div class="teaching-row" role="row"><span role="cell">2020 Fall</span><strong role="cell">Differential Geometry I</strong><span role="cell">NTU</span></div>
+        </div>
+      </section>
+
+      <section class="contact-band" id="contact">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Yu-Chi Hou</h2>
+          <p>
+            Ph.D. student, Department of Mathematics, University of Maryland,
+            College Park.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:corykiki123@gmail.com">Email</a>
+          <a href="https://github.com/yu-chihou">GitHub</a>
+          <a href="https://sites.google.com/view/yuchi-hou/activities">Activities archive</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

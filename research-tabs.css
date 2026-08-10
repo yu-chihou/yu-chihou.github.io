@@ -1,0 +1,66 @@
+.research-tabs {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.research-tab-list {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--rule);
+}
+
+.research-tab {
+  min-height: 3.25rem;
+  margin: 0 0 -1px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 0.75rem 1.2rem;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 750;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.research-tab:hover {
+  background: var(--hover-bg);
+  color: var(--accent-dark);
+}
+
+.research-tab[aria-selected="true"] {
+  border-color: var(--rule);
+  border-bottom-color: var(--paper);
+  background: var(--paper);
+  color: var(--foreground);
+}
+
+.research-tab:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid rgba(94, 124, 145, 0.45);
+  outline-offset: -3px;
+}
+
+.research-tab-panel {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--band-bg);
+  padding: 1rem;
+}
+
+.research-tab-panel[hidden] {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .research-tab {
+    min-height: 3rem;
+    padding: 0.65rem 0.95rem;
+    font-size: 0.95rem;
+  }
+}

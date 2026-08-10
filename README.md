@@ -17,5 +17,18 @@ Page files:
 - `index.html`: home and contact information
 - `research.html`: publications, preprints, and notes
 - `activities.html`: talks, seminars, and service
-- `teaching.html`: teaching and grading history
+- `mathematicians.html`: mathematician directory
+- `misc.html`: books, albums, films, and other interests
 - `styles.css`: colors, spacing, typography, and responsive layout
+
+Long-form content is grouped by type instead of being placed in the repository
+root. Use this pattern for new pages:
+
+- `reviews/books/<slug>/index.html`: book reviews
+- `reviews/albums/<slug>/index.html`: album reviews
+- `reviews/films/<slug>/index.html`: film reviews
+
+The `<slug>` should be a short, lowercase, hyphen-separated name. For example,
+the review of *Elected American* lives at
+`reviews/books/elected-american/index.html` and is published at
+`/reviews/books/elected-american/`.

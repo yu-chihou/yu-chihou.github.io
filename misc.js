@@ -34,17 +34,32 @@
   };
 
   const createCard = (item, type, settings) => {
+    const hasBookReview =
+      type === "books" && Boolean(item.review_url);
+    const destination = hasBookReview
+      ? item.review_url
+      : item.url;
+
     const card = document.createElement("article");
     card.className = "media-card";
     card.dataset.kind = type;
 
-    const content = document.createElement(item.url ? "a" : "div");
+    if (hasBookReview) {
+      card.dataset.hasReview = "true";
+    }
+
+    const content = document.createElement(
+      destination ? "a" : "div"
+    );
     content.className = "media-card-link";
 
-    if (item.url) {
-      content.href = item.url;
-      content.target = "_blank";
-      content.rel = "noopener noreferrer";
+    if (destination) {
+      content.href = destination;
+
+      if (!hasBookReview) {
+        content.target = "_blank";
+        content.rel = "noopener noreferrer";
+      }
     }
 
     const image = document.createElement("img");
@@ -78,7 +93,8 @@
 
     copy.append(title, metadata);
 
-    if (item.note) {
+    // Book reviews live on their own pages, so book cards stay compact.
+    if (item.note && type !== "books") {
       const note = document.createElement("p");
       note.className = "media-card-note";
       note.textContent = item.note;

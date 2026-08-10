@@ -1454,9 +1454,110 @@ a.useful-link-card:hover {
   color: var(--muted);
 }
 
+.review-page {
+  min-height: calc(100vh - 4rem);
+  border-top: 5px solid var(--accent);
+  background: var(--paper);
+}
+
+.review-post {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 4vw, 2rem)
+    clamp(4rem, 8vw, 7rem);
+}
+
+.review-back {
+  display: inline-block;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  color: var(--accent-dark);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.review-post-header {
+  margin-bottom: 2rem;
+}
+
+.review-post-header .section-kicker {
+  margin-bottom: 0.8rem;
+}
+
+.review-post h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 7vw, 3.55rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.review-meta {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  font-style: italic;
+}
+
+.review-cover-link {
+  display: block;
+  width: min(271px, 72vw);
+  margin: clamp(2rem, 6vw, 3.5rem) auto;
+  text-decoration: none;
+}
+
+.review-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  box-shadow: 0 0.65rem 1.7rem rgba(20, 31, 43, 0.14);
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.review-cover-link:hover .review-cover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.review-body {
+  color: var(--body-copy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.08rem, 2vw, 1.22rem);
+  line-height: 1.78;
+}
+
+.review-body p {
+  margin: 0 0 1.35rem;
+}
+
+.review-body blockquote {
+  margin: 2rem 0;
+  border-left: 3px solid var(--accent);
+  padding: 0.2rem 0 0.2rem 1.35rem;
+  color: var(--foreground);
+  font-style: italic;
+}
+
+.review-body blockquote p {
+  margin: 0;
+}
+
 @media (min-width: 700px) {
   .media-grid {
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     gap: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-cover {
+    transition: none;
   }
 }

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Books, notes, and other things collected by Yu-Chi Hou."
+      content="Books, albums, films, and other interests collected by Yu-Chi Hou."
     />
     <meta name="theme-color" content="#f6f6f1" />
+
     <script>
       (() => {
         try {
@@ -15,6 +16,7 @@
           const systemDark = window.matchMedia(
             "(prefers-color-scheme: dark)"
           ).matches;
+
           document.documentElement.dataset.theme =
             savedTheme || (systemDark ? "dark" : "light");
         } catch {
@@ -22,12 +24,24 @@
         }
       })();
     </script>
+
     <title>Misc | Yu-Chi Hou</title>
+
     <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml" />
-    <link rel="icon" href="favicon-32.png?v=4" type="image/png" sizes="32x32" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=4" sizes="180x180" />
-    <link rel="stylesheet" href="styles.css?v=20260809-21" />
+    <link
+      rel="icon"
+      href="favicon-32.png?v=4"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="apple-touch-icon.png?v=4"
+      sizes="180x180"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260810-2" />
   </head>
+
   <body>
     <header class="site-header">
       <div class="site-header-inner">
@@ -45,6 +59,7 @@
               height="38"
             />
           </a>
+
           <button
             class="theme-toggle"
             type="button"
@@ -55,6 +70,7 @@
             <span class="theme-toggle-icon" aria-hidden="true">☾</span>
           </button>
         </div>
+
         <nav aria-label="Primary navigation">
           <a href="index.html">Home</a>
           <a href="research.html">Research</a>
@@ -65,21 +81,30 @@
     </header>
 
     <main>
-      <section class="content-section" aria-label="Miscellaneous interests">
+      <section
+        class="content-section"
+        aria-label="Miscellaneous interests"
+      >
         <div class="research-groups misc-groups">
+          <details class="research-group misc-group" open>
             <summary>Recently Read</summary>
             <div class="misc-group-body">
+              <div class="media-grid" id="books-grid"></div>
             </div>
           </details>
 
           <details class="research-group misc-group">
             <summary>Recently Listened To</summary>
-            <div class="misc-group-body"></div>
+            <div class="misc-group-body">
+              <div class="media-grid" id="albums-grid"></div>
+            </div>
           </details>
 
           <details class="research-group misc-group">
             <summary>Recently Watched</summary>
-            <div class="misc-group-body"></div>
+            <div class="misc-group-body">
+              <div class="media-grid" id="films-grid"></div>
+            </div>
           </details>
 
           <details class="research-group misc-group">
@@ -90,7 +115,9 @@
       </section>
     </main>
 
+    <script src="misc.js?v=20260810-1" defer></script>
     <script src="theme.js?v=20260809-6" defer></script>
+
     <script
       data-goatcounter="https://coryhou.goatcounter.com/count"
       async

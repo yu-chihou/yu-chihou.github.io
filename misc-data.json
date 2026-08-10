@@ -1,5 +1,15 @@
 {
-  "books": [],
+  "books": [
+    {
+      "title": "Elected American: From Red China to Blue Maryland",
+      "creator": "Lily Qi",
+      "year": "2026",
+      "date": "August 2026",
+      "image": "https://tupress.temple.edu/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTUyNjIsInB1ciI6ImJsb2JfaWQifX0=--e63b71076d512586af23c030e023f2271c064351/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJiYWNrZ3JvdW5kIjoidHJhbnNwYXJlbnQiLCJncmF2aXR5IjoiY2VudGVyIiwicmVzaXplX2FuZF9wYWQiOlsyNzEsNDIxXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--070fa9db3724b1f1cd77cb50ab7fb44dc49f9146/Qi-Cover-GIF.gif",
+      "url": "https://tupress.temple.edu/books/elected-american",
+      "note": "An engaging account of how a first-gen immigrant from China, who lived through the Cultural Revolution, became a figure in Maryland Democrat politics. Her perspective and experiences challenged many of my assumptions about first-gen Asian immigrants in the U.S.  Her story is also a good reminder of what politics actually is, giving me a glimmer of hope for democracy in this polarized era. At a time when everyone is talking about 東升西降, her words may sound clichéd, but they still moved me: “You can be economically successful in China or in any other country. But only in America can you run for office and get elected by people who can’t even pronounce your last name.”"
+    }
+  ],
   "albums": [],
   "films": []
 }

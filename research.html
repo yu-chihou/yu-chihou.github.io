@@ -27,6 +27,7 @@
     <link rel="icon" href="favicon-32.png?v=4" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png?v=4" sizes="180x180" />
     <link rel="stylesheet" href="styles.css?v=20260809-21" />
+    <link rel="stylesheet" href="research-tabs.css?v=20260810-1" />
   </head>
   <body>
     <header class="site-header">
@@ -66,9 +67,37 @@
 
     <main>
       <section class="content-section" aria-label="Research publications and notes">
-        <div class="research-groups">
-          <details class="research-group">
-            <summary>Preprints</summary>
+        <div class="research-tabs">
+          <div class="research-tab-list" role="tablist" aria-label="Research papers">
+            <button
+              class="research-tab"
+              id="preprints-tab"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="preprints-panel"
+            >
+              Preprints
+            </button>
+            <button
+              class="research-tab"
+              id="publications-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="publications-panel"
+              tabindex="-1"
+            >
+              Publications
+            </button>
+          </div>
+
+          <section
+            class="research-tab-panel"
+            id="preprints-panel"
+            role="tabpanel"
+            aria-labelledby="preprints-tab"
+          >
             <div class="research-list">
               <article class="research-card">
                 <div>
@@ -85,10 +114,14 @@
                 </p>
               </article>
             </div>
-          </details>
+          </section>
 
-          <details class="research-group">
-            <summary>Publications</summary>
+          <section
+            class="research-tab-panel"
+            id="publications-panel"
+            role="tabpanel"
+            aria-labelledby="publications-tab"
+          >
             <div class="research-list">
               <article class="research-card">
                 <div>
@@ -104,8 +137,10 @@
                 </p>
               </article>
             </div>
-          </details>
+          </section>
+        </div>
 
+        <div class="research-groups">
           <details class="research-group">
             <summary>Notes</summary>
             <div class="research-list">
@@ -156,6 +191,45 @@
     </main>
 
     <script src="theme.js?v=20260809-6" defer></script>
+    <script>
+      (() => {
+        const tabList = document.querySelector('[role="tablist"]');
+        if (!tabList) return;
+
+        const tabs = [...tabList.querySelectorAll('[role="tab"]')];
+
+        const selectTab = (selectedTab, moveFocus = false) => {
+          tabs.forEach((tab) => {
+            const isSelected = tab === selectedTab;
+            const panel = document.getElementById(tab.getAttribute("aria-controls"));
+
+            tab.setAttribute("aria-selected", String(isSelected));
+            tab.tabIndex = isSelected ? 0 : -1;
+            if (panel) panel.hidden = !isSelected;
+          });
+
+          if (moveFocus) selectedTab.focus();
+        };
+
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => selectTab(tab));
+          tab.addEventListener("keydown", (event) => {
+            let nextIndex;
+
+            if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+            if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+            if (event.key === "Home") nextIndex = 0;
+            if (event.key === "End") nextIndex = tabs.length - 1;
+            if (nextIndex === undefined) return;
+
+            event.preventDefault();
+            selectTab(tabs[nextIndex], true);
+          });
+        });
+
+        selectTab(tabs.find((tab) => tab.getAttribute("aria-selected") === "true") || tabs[0]);
+      })();
+    </script>
     <script
       data-goatcounter="https://coryhou.goatcounter.com/count"
       async

@@ -7,7 +7,6 @@
 .research-tab-list {
   display: flex;
   gap: 0.25rem;
-  overflow-x: auto;
   border-bottom: 1px solid var(--rule);
 }
 

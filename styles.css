@@ -1177,6 +1177,26 @@ a.useful-link-card:hover {
   text-transform: uppercase;
 }
 
+.visit-counter {
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  padding: 1rem clamp(1rem, 3vw, 2.75rem);
+  color: var(--muted);
+  font: 0.78rem/1.5 var(--mono);
+  text-align: center;
+}
+
+.visit-counter p {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+#sitewide-total {
+  color: var(--foreground);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
 .site-footer {
   border-top: 1px solid var(--foreground);
   background: #263b50;

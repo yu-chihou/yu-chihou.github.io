@@ -1021,13 +1021,6 @@ a.useful-link-card:hover {
   color: var(--body-copy);
 }
 
-.ai-notes-document-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  color: var(--accent-dark) !important;
-  font-weight: 700;
-}
-
 .activity-groups {
   display: grid;
   gap: 1rem;

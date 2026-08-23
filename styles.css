@@ -1012,6 +1012,22 @@ a.useful-link-card:hover {
   background: var(--band-bg);
 }
 
+.ai-notes-warning {
+  margin: 0;
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  background: var(--paper);
+  padding: 1rem 1.1rem;
+  color: var(--body-copy);
+}
+
+.ai-notes-document-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--accent-dark) !important;
+  font-weight: 700;
+}
+
 .activity-groups {
   display: grid;
   gap: 1rem;

@@ -116,23 +116,28 @@
 
       .schedule-table th:first-child,
       .schedule-table td:first-child {
-        width: 12%;
+        width: 10%;
         white-space: nowrap;
       }
 
       .schedule-table th:nth-child(2),
       .schedule-table td:nth-child(2) {
-        width: 50%;
+        width: 43%;
       }
 
       .schedule-table th:nth-child(3),
       .schedule-table td:nth-child(3) {
-        width: 20%;
+        width: 16%;
+      }
+
+      .schedule-table th:nth-child(4),
+      .schedule-table td:nth-child(4) {
+        width: 14%;
       }
 
       .schedule-table th:last-child,
       .schedule-table td:last-child {
-        width: 18%;
+        width: 17%;
       }
 
       .schedule-table tr:last-child td {
@@ -210,6 +215,7 @@
         .schedule-table td:first-child,
         .schedule-table td:nth-child(2),
         .schedule-table td:nth-child(3),
+        .schedule-table td:nth-child(4),
         .schedule-table td:last-child {
           position: relative;
           width: 100%;
@@ -243,6 +249,10 @@
 
         .schedule-table td:nth-child(4)::before {
           content: "Speaker";
+        }
+
+        .schedule-table td:nth-child(5)::before {
+          content: "Supplement";
         }
       }
     </style>
@@ -414,6 +424,7 @@
                   <th scope="col">Content</th>
                   <th scope="col">Reference</th>
                   <th scope="col">Speaker</th>
+                  <th scope="col">Supplement</th>
                 </tr>
               </thead>
               <tbody>
@@ -425,36 +436,42 @@
                   </td>
                   <td>Milnor §2</td>
                   <td>Vasanth</td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Sep 16</td>
                   <td>Fundamental Theorem of Morse Theory I</td>
                   <td>Milnor §3</td>
                   <td>Jen Lorenzo</td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Sep 23</td>
                   <td>Fundamental Theorem of Morse Theory II</td>
                   <td>Milnor §3</td>
                   <td>Jen Lorenzo</td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Sep 30</td>
                   <td>Fundamental Theorem of Morse Theory III</td>
                   <td>Milnor §3</td>
                   <td>Jen Lorenzo</td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Oct 7</td>
                   <td>Reeb Theorem, Morse inequalities</td>
                   <td>Milnor §4, 5</td>
                   <td>Xuchun</td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Oct 14</td>
                   <td>Existence of Morse Functions</td>
                   <td>Milnor §6</td>
                   <td>Eric</td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Oct 21</td>
@@ -464,42 +481,49 @@
                   </td>
                   <td>Milnor §§4, 7</td>
                   <td>Yu-Chi</td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Oct 28</td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Nov 4</td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Nov 11</td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Nov 18</td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Dec 2</td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
+                  <td aria-label="No supplement"></td>
                 </tr>
                 <tr>
                   <td>Dec 9</td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
                   <td aria-label="To be announced"></td>
+                  <td aria-label="No supplement"></td>
                 </tr>
               </tbody>
             </table>

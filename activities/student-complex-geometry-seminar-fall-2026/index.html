@@ -121,6 +121,41 @@
         border-bottom: 0;
       }
 
+      .further-topics {
+        margin-top: 2.5rem;
+      }
+
+      .further-topics-intro {
+        margin-top: -0.35rem;
+        color: var(--muted);
+      }
+
+      .topic-list {
+        margin-top: 1.25rem;
+        padding-left: 1.4rem;
+      }
+
+      .topic-list > li {
+        margin: 1.5rem 0;
+        padding-left: 0.3rem;
+      }
+
+      .topic-list h3 {
+        margin: 0 0 0.65rem;
+        font-size: 1.05rem;
+        line-height: 1.45;
+      }
+
+      .topic-references {
+        margin: 0.55rem 0 0;
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+      }
+
+      .topic-references li {
+        margin: 0.55rem 0;
+      }
+
       @media (max-width: 600px) {
         .seminar-page h1 {
           font-size: clamp(1rem, 5vw, 1.9rem);
@@ -320,6 +355,90 @@
               </tbody>
             </table>
           </div>
+
+          <section class="further-topics" aria-labelledby="further-topics-title">
+            <h2 id="further-topics-title">Potential Further Topics</h2>
+            <p class="further-topics-intro">Suggestions are welcome!</p>
+
+            <ol class="topic-list">
+              <li>
+                <h3>
+                  Morse Theory on Path Spaces, Riemannian Geometry, and Bott
+                  Periodicity
+                </h3>
+                <strong>References:</strong>
+                <ul class="topic-references">
+                  <li>
+                    J. W. Milnor,
+                    <cite
+                      ><a
+                        href="../../documents/milnor-morse-theory-unofficial-printing.pdf"
+                        >Morse Theory</a
+                      ></cite
+                    >, Annals of Mathematics Studies, No. 51, Princeton
+                    University Press, Princeton, NJ, 1963; Parts III–IV.
+                  </li>
+                  <li>
+                    J. Cheeger and D. G. Ebin,
+                    <cite>Comparison Theorems in Riemannian Geometry</cite>,
+                    North-Holland Mathematical Library, Vol. 9, North-Holland,
+                    Amsterdam–Oxford, 1975; American Elsevier Publishing Co.,
+                    Inc., New York, 1975; Chapter 4.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <h3>
+                  Witten Deformation and the Analytic Approach to Morse
+                  Inequalities
+                </h3>
+                <strong>References:</strong>
+                <ul class="topic-references">
+                  <li>
+                    E. Witten, “Supersymmetry and Morse Theory,”
+                    <cite>Journal of Differential Geometry</cite>
+                    <strong>17</strong> (1982), no. 4, 661–692 (1983).
+                  </li>
+                  <li>
+                    W. P. Zhang,
+                    <cite
+                      >Lectures on Chern–Weil Theory and Witten
+                      Deformations</cite
+                    >, Nankai Tracts in Mathematics, Vol. 4, World Scientific,
+                    River Edge, NJ, 2001; Chapter 5.
+                  </li>
+                  <li>
+                    G. Marinescu,
+                    <cite
+                      ><a
+                        href="https://www.mi.uni-koeln.de/~gmarines/PREPRINTS/habil.pdf"
+                        >The Laplace Operator on High Tensor Powers of a Line
+                        Bundle</a
+                      ></cite
+                    >, Habilitationsschrift; Chapter 2.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <h3>Morse Homology</h3>
+                <strong>References:</strong>
+                <ul class="topic-references">
+                  <li>
+                    M. Audin and M. Damian,
+                    <cite>Morse Theory and Floer Homology</cite>, translated
+                    from the 2010 French original by Reinie Erné, Universitext,
+                    Springer, London, 2014; EDP Sciences, Les Ulis, 2014; Part I.
+                  </li>
+                  <li>
+                    M. Schwarz, <cite>Morse Homology</cite>, Progress in
+                    Mathematics, Vol. 111, Birkhäuser, Basel, 1993.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </section>
         </div>
       </article>
     </main>

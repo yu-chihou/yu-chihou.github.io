@@ -64,6 +64,56 @@
         font-size: 1rem;
       }
 
+      .schedule-table-wrap {
+        margin-top: 1rem;
+        overflow-x: auto;
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+      }
+
+      .schedule-table {
+        width: 100%;
+        min-width: 720px;
+        border-collapse: collapse;
+        background: var(--paper);
+      }
+
+      .schedule-table th,
+      .schedule-table td {
+        padding: 0.85rem 1rem;
+        border-bottom: 1px solid var(--rule);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .schedule-table th {
+        background: var(--band-bg);
+        font-family: var(--mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+      }
+
+      .schedule-table th:first-child,
+      .schedule-table td:first-child {
+        width: 13%;
+        white-space: nowrap;
+      }
+
+      .schedule-table th:nth-child(2),
+      .schedule-table td:nth-child(2) {
+        width: 51%;
+      }
+
+      .schedule-table th:nth-child(3),
+      .schedule-table td:nth-child(3) {
+        width: 20%;
+        white-space: nowrap;
+      }
+
+      .schedule-table tr:last-child td {
+        border-bottom: 0;
+      }
+
       @media (max-width: 600px) {
         .seminar-page h1 {
           font-size: clamp(1rem, 5vw, 1.9rem);
@@ -134,6 +184,55 @@
             Princeton University Press, Princeton, NJ, 1963
             (<a href="../../documents/milnor-morse-theory-unofficial-printing.pdf">unofficial printing</a>).
           </p>
+
+          <h2>Tentative Schedule</h2>
+          <div class="schedule-table-wrap">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Content</th>
+                  <th scope="col">Reference</th>
+                  <th scope="col">Speaker</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sep 9</td>
+                  <td>
+                    Introduction, Hessian, Non-degenerate Critical Points,
+                    Morse Lemma
+                  </td>
+                  <td>Milnor §2</td>
+                  <td>Vasanth</td>
+                </tr>
+                <tr>
+                  <td>Sep 16</td>
+                  <td>Fundamental Theorem of Morse Theory I</td>
+                  <td>Milnor §3</td>
+                  <td aria-label="To be announced"></td>
+                </tr>
+                <tr>
+                  <td>Sep 23</td>
+                  <td>Fundamental Theorem of Morse Theory II</td>
+                  <td>Milnor §3</td>
+                  <td aria-label="To be announced"></td>
+                </tr>
+                <tr>
+                  <td>Sep 30</td>
+                  <td>Fundamental Theorem of Morse Theory III</td>
+                  <td>Milnor §3</td>
+                  <td aria-label="To be announced"></td>
+                </tr>
+                <tr>
+                  <td>Oct 2</td>
+                  <td aria-label="To be announced"></td>
+                  <td>Milnor §4</td>
+                  <td aria-label="To be announced"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </article>
     </main>

@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Yu-Chi Hou 談 AI、自動證明與數學研究文化的文章。"
+    />
+    <meta name="theme-color" content="#f6f6f1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="半個vibe數學家的辯白" />
+    <meta
+      property="og:description"
+      content="關於 AI、自動證明，以及數學家在新時代中角色的思考。"
+    />
+    <meta
+      property="og:url"
+      content="https://yu-chihou.github.io/essays/half-vibe-mathematician/"
+    />
+    <link
+      rel="canonical"
+      href="https://yu-chihou.github.io/essays/half-vibe-mathematician/"
+    />
+
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("yu-theme");
+          const systemDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+
+          document.documentElement.dataset.theme =
+            savedTheme || (systemDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+
+    <title>半個vibe數學家的辯白 | Yu-Chi Hou</title>
+
+    <link rel="icon" href="../../favicon.svg?v=4" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="../../favicon-32.png?v=4"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../../apple-touch-icon.png?v=4"
+      sizes="180x180"
+    />
+    <link rel="stylesheet" href="../../styles.css?v=20260904-1" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="header-tools">
+          <a
+            class="brand"
+            href="../../index.html"
+            aria-label="Yu-Chi Hou home"
+            title="Home"
+          >
+            <img
+              src="../../apple-touch-icon.png?v=4"
+              alt=""
+              width="38"
+              height="38"
+            />
+          </a>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            title="Change theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          </button>
+        </div>
+
+        <nav aria-label="Primary navigation">
+          <a href="../../index.html">Home</a>
+          <a href="../../research.html">Research</a>
+          <a href="../../activities.html">Activities</a>
+          <a href="../../misc.html" aria-current="page">Misc</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="review-page">
+      <article class="review-post" aria-labelledby="essay-title">
+        <a class="review-back" href="../../misc.html">← Back to Misc</a>
+
+        <header class="review-post-header">
+          <p class="section-kicker">Essay</p>
+          <h1 id="essay-title">半個vibe數學家的辯白</h1>
+          <p class="review-meta">Yu-Chi Hou · September 4, 2026</p>
+        </header>
+
+        <div class="review-body">
+          <p>
+            Hardy 在 <cite>A Mathematician's Apology</cite>
+            開頭寫道：「一個數學家的功用應該是做點有用的事，證明一些定理、發現一些新數學，而不是討論他自己或其他數學家做了什麼」。在這個
+            AI
+            已經自動化證明與驗證許多猜想、讓數學家基本上要失業（並沒有）的時代，作為（已經沒有用處的）半個
+            vibe 數學家的我想要替自己使用萬惡 AI
+            做一次無力的辯白，順便記錄一下我對於數學家們對於存亡危機各種態度的看法。
+          </p>
+
+          <section aria-labelledby="section-one">
+            <h2 id="section-one">I.</h2>
+            <p>
+              我最近使用 Rethlas（一個專門自動證明數學問題的 AI
+              Harness）探索了好幾個問題。
+            </p>
+
+            <ol>
+              <li>
+                <p>
+                  首先，在跟我老闆討論之後，我們發現如果將問題敘述、記號設定以及可能的策略與不可行的策略的反例打成一張三到四頁的
+                  PDF 讓 GPT 生成為 Markdown 檔丟進去，不論是用 Rethlas
+                  或是直接在 Codex
+                  上問效果都比用直接文字打更好。我個人認為這個過程對人類（我）也有幫助，可以幫我釐清要證明的敘述以及記號。我首先試了一個之前在測試用
+                  AI 自動生成數學論文過程中爬文獻發現 Demailly
+                  的一個猜想。Rethlas
+                  沒有給出新的東西，只有嘗試了把所有它能做的特例都做完了。
+                </p>
+              </li>
+              <li>
+                <p>
+                  接著，我嘗試了我跟合作者卡了半年之久的問題，大致上是一個證明某個函數序列收斂到另一個函數（只是變數本身也是函數）的問題。AI
+                  在跑了八個小時、燒了我 100 美金 Pro 訂閱週用量的 30%
+                  之後，使用了一個我之前知道但不覺得有用的行列式恆等式加上一些標準的不等式手法證明了某種
+                  contraction mapping principle，將問題化約只需要證明 liminf
+                  有逐點下界。
+                </p>
+              </li>
+              <li>
+                <p>
+                  我重新修改了我的問題換成這個簡化的敘述，又用了 Rethlas
+                  跑了八個小時左右卡住不動了。我實在是沒耐心了按下中止，開始用
+                  AI 整理它生成出來的 Markdown
+                  檔。它宣稱可以在一個特殊的情況做出來，用到了一些我沒看過的技巧（後來追溯到一篇法文文章），但接下來完全是胡說八道。接著我自己花了三天開始嘗試把
+                  AI
+                  開了頭的思路接著完成，目前跟合作者和老闆討論看起來是沒問題（希望）。有趣的是，我今天跟老闆討論過程中，老闆突然發現在他最近一篇文章中，AI
+                  也建議了他類似的構造。他的結論是這個技巧或許在早期法國
+                  pluripotential
+                  學派是廣為人知的手法，藏在了他們某本（有出版的）研討會紀錄裡，但已經被我們這一些年輕一代給遺忘了（老闆：那些先驅們搞不好正在嘲笑我們）。
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="section-two">
+            <h2 id="section-two">II.</h2>
+            <p>
+              到底（目前版本的）AI
+              跟人類數學家的差別是什麼呢？從我的經驗跟目前看到 AI
+              解決我熟悉的案例來說：
+            </p>
+
+            <ol>
+              <li>
+                <p>
+                  AI
+                  很有耐力也熟讀文獻，有時候能夠嘗試人類因為種種偏見而放棄或忽略的路徑。OpenAI
+                  公布用 Astra
+                  解決的十個猜想的第八題，所有的想法與工具都在人類的文獻裡面了，但在那個問題中，人類過去的計算或估計現在必須要在一個更複雜的設定上去進行。AI
+                  勇敢地（？）嘗試了沒有人類敢嘗試的這條路。類似地，在我跟我老闆的問題中，因為我們的無知，我們從來都不敢嘗試那個其實已經隱藏在七、八十年代人們或許早就發現的技巧，透過
+                  AI 又重新出土教了我們。
+                </p>
+              </li>
+              <li>
+                <p>
+                  另一方面，現代數學的發展高度專精化的結果就是一個人類數學家本身知識的涵蓋範圍非常有限。有時候一個問題的解決需要的工具很可能超出對於該問題的專家們通常具備的武器庫。例如最近（應該是被）證明的六維球複結構，就需要進行很複雜具體的構造以及拓樸的計算。我的合作者就說很難想像對這個問題感興趣的複幾何學家們有這個能力可以實現這個具體例子的構造。同時，它也很能算，能夠做很多很難想像人類能夠用手算的細碎工作。例如劉繼豪那篇
+                  YTD
+                  猜想反例的構造就需要調整這其中的很多參數讓結果能對。
+                </p>
+              </li>
+              <li>
+                <p>
+                  如果要以擬人比喻，是一個（以數學家的評價體系來說）不是太聰明，但很勤勉也熟讀文獻的數學家。它目前沒有展現出能夠跳出既有文獻框架，提出一個完全改變思路的方法，或甚至開創一個人類沒有看過的概念或理論來解決問題的能力。過去人類的許多無法解決的猜想，可能有
+                  70%（不精準估計）都是這種注意力瓶頸、沒有足夠多的數學家有足夠的時間嘗試足夠多的道路，就算嘗試了也可能在路上拐錯了彎走進死胡同裡就放棄了。AI
+                  能夠在十六個小時做到我可能需要花兩個月摸索也不一定能夠摸出來的頭緒。
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="section-three">
+            <h2 id="section-three">III.</h2>
+            <p>
+              在這個 AI
+              已經能夠解決人類過去無法解決的猜想的情況，前陣子我遇到有個人跟我說：「當我們用
+              AI
+              把好問題都解決了，那我們數學家要做什麼？我們的數學就毫無方向毫無頭緒了」。但我不認同這種認為一些人（或是
+              AI 公司）利用這些 LLM
+              橫掃猜想無異於殺雞取卵、因此數學要完蛋的說法。
+            </p>
+
+            <ol>
+              <li>
+                <p>
+                  首先，數學研究就等於解決猜想嗎？數學家們對於猜想之所以放置如此高的地位，一部分原因是人們在解決有些猜想的過程當中提出了各種概念最後發展成一個個的數學領域。人們奠基在這些領域中的問出了更多的問題，因此一層層疊加成了當今繁盛的數學體系。有些淺顯易懂的古老猜想，很可能需要數百年知識的發展才能得到解答，例如費馬的最後定理（1637–1994）。因此，許多數學家會說猜想本身並不重要，過程才是最重要的。一個好問題之所以好正是因為它們可以作為媒介引領一代代數學家們嘗試回答它們的過程當中發展出各式各樣的工具或技術，這些工具或技術又進一步發展成理論與領域。這些我都認同，也是過去數學發展歷史的軌跡。
+                </p>
+              </li>
+              <li>
+                <p>
+                  然而，所謂的猜想，是過去數學家在研究種種現象中提出來自己沒辦法解決的問題。通常這種問題，都有非常明確的敘述。然而當
+                  AI
+                  即將（或是已經）很擅長解決這樣的問題時，我相信在可預見的未來內，數學家最主要的工作就是問出有意思的模糊問題、摸清楚那些模糊的問題、找到正確的條件敘述來讓人類或是
+                  AI
+                  來進行證明。舉例來說，很多人都知曉 Perelman（奠基於
+                  Hamilton
+                  的工作）解決了千禧年難題，但比較少人知道 Thurston
+                  才是那個引領這一切發展的人。他提出了三維空間應該要如何被拆解成八類空間的綱領，後面才有
+                  Hamilton 發展了 Ricci flow 來試圖完成這個圖景。那 AI
+                  能不能解決這樣的問題呢？我不知道。但我認為我們可能需要等好一陣子（當然，我也可能錯得離譜）。它們現在並沒有展現出這種提問並摸清楚模糊的問題的能力，我也不知道這樣子的能力要怎麼設立
+                  benchmark 來訓練 AI。
+                </p>
+              </li>
+              <li>
+                <p>
+                  對我來說，六維球存在複結構這個困擾幾十年的 Hopf 猜想被
+                  Claude
+                  解決了，很好。那我們來想更困難的問題吧！丘成桐曾經猜想六維以上的近複流形都有複結構的猜想呢？相比來說，Hopf
+                  猜想簡直就是小兒科。或許 AI
+                  能找到反例，那太好了！那我們來問有什麼樣的刻畫條件吧！為什麼大家平常都朗朗上口科學研究中「一個問題被解決了後面有十個問題出現」這個敘述，當
+                  AI 加入了解決問題行列中卻無法同樣看待呢？
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="section-four">
+            <h2 id="section-four">IV.</h2>
+            <p>
+              更進一步說，我更想探討為什麼許多數學家們對於猜想如此執著，甚至到了有存亡危機的意識，甚至指責
+              AI
+              造成種種數學亂象。然而，我認為這些亂象是由於過往以來的文化慣性與數學發展已經產生了摩擦，或者用
+              AI 的話語說：Misalignment。只是現在 AI
+              的出現讓原本只是門診的病患現在直接進 ICU 而已。
+            </p>
+
+            <ol>
+              <li>
+                <p>
+                  如果借用陶哲軒在 ICM
+                  演講上一個數學工作的生命循環框架來說：
+                </p>
+
+                <blockquote>
+                  <p>
+                    證明生成（Proof Generation）→
+                    證明驗證（Proof Verification）→
+                    證明闡述（Proof Exposition）→
+                    證明發表（Proof Publication）→
+                    證明標準化（Proof Canonicalization）
+                  </p>
+                </blockquote>
+
+                <p>
+                  我們過去過於強調前兩步，將主要的注意力與成就歸功於生成問題的證明的人，我們稱這些人具有「原創性」，並以此來評判一個人的數學能力與成就，作為學術機構聘人與升等的標準。這個「解決困難的猜想
+                  →
+                  被認為有原創性的高評價」的激勵機制或許是數學家的文化中淵遠流長的傳統。在現代意義的學術體系形成之前，現代數學的發展就是從歐洲的數學天才們（伯努利兄弟、歐拉、牛頓等等）在閒暇之餘的數學決鬥（？）中衍伸的。而沿襲到當今的學術體系中，我們認為最優秀的數學家就是應該要「證明新結果」，我們將驗證、消化、重構、打磨、普及化等部分都放在次要的位置。
+                </p>
+              </li>
+              <li>
+                <p>
+                  這樣的學術生產體系的激勵機制，在 AI
+                  出現之前就鼓勵了一些人整天盯著熱潮衝進去搶問題做猜想，也產生了很多人發水文拼教職、拼升等的陋習，不是在乎數學而是想著量產文章、想著投上好期刊的學術投機行為已經造成審稿系統瀕臨崩潰。當然，這些行為並不被「好的」數學家接受，但整個社群也就是得過且過，因為他們相信可以透過期刊或是聘人的篩選機制來濾掉或賦予這樣的人較低的評價。然而，放到現在的
+                  AI
+                  時代的結果就是有些人拼命地想要用 AI 像是在 Vegas
+                  的賭客一般燒著每個月上千美金的 API
+                  一次性地嘗試橫掃好幾個甚至數十個猜想，盯著看哪個猜想可以馬上被證明，就用
+                  AI 自動用 Lean
+                  驗證放上去，甚至很多明顯就是 AI
+                  直接生成就丟上來了。我認為這些人之所以這樣做的原因就是因為他們還在用過去的激勵機制與學術生產思維在思考。現在人類已經有能力用
+                  AI
+                  大批次工業產出在過去評價標準中「高原創性的文章」來衝垮期刊評審系統，進而影響聘任系統。
+                </p>
+              </li>
+              <li>
+                <p>
+                  同時，我們嚴重低估了陶哲軒說的後面三個階段。在這樣的傳統評價標準當中，我們認為寫綜述（Survey）、寫闡述文章（Expository）都比不上證明一個猜想來得重要，你幾乎無法看到這類文章能夠登上好期刊，因為好期刊們都要求「原創的新數學」，而那些刊載這類綜述的文章沒辦法幫你升等。更甚者，我們認為只有次等的數學家或是退休的數學家才會去寫課本（應該
+                  Hardy
+                  會同意這個看法）。但是，重新整理拆解、更好地闡述已知的結果真的是低人一等嗎？1964
+                  年，前陣子過世的廣中平祐在《數學年鑑》（top
+                  journal）上刊了一百頁證明了代數幾何的奇點解消定理。以當時
+                  1960
+                  年代的標準來說，這一百頁的證明幾乎是一頭怪獸，大家相信是對的、每天都在用他的結果卻很少人真的想去了解中間的細節。很多時候大家只會用到結論，但也有時候你需要知道當初證明的細節才得以做更精細的微調來證明其他的結果。直到三十年後，陸續才開始許多人嘗試簡化他的證明，現在廣中平祐的結果已經有一個受過基本代數幾何訓練的研究生就可以讀的教材。正如陶哲軒所說，一個數學成果要有用，必須要從期刊中走出來被社群所接受、所理解，被應用在其他不同問題上。
+                </p>
+              </li>
+              <li>
+                <p>
+                  在 AI
+                  出現之前，人們已經在笑說沒有人會去讀、更正別人的文章，看到別的結果就拿來用，大家都埋頭苦幹自己的問題，因為這樣才是在學術體系生存的唯一方法。如果我們不改變獎勵的機制，不去改變已經存在於數學家腦袋裡上百年對於「原創性結果」的評價標準，那麼大家這種用
+                  AI
+                  搶著解猜想的競賽只會無窮無盡地繼續下去。那麼，我們該怎麼辦呢？到底該，或不該用
+                  AI
+                  呢？我認為最不應該做的就是鴕鳥心態，尤其是那些位居高位的數學家們。他們有責任要扛起引領大家討論與思考新的行業規範與激勵機制，而不是躲在自己的學術職位裡面說我堅持手工製作，而讓學生們、年輕從業者們去面對未知的風險。
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="section-five">
+            <h2 id="section-five">V.</h2>
+            <p>當然，我沒有要否認 AI 對於數學家所帶來的負面影響。</p>
+
+            <ol>
+              <li>
+                <p>
+                  就像陶哲軒用食物做譬喻，在食物豐沛（不知道他是不是看了
+                  Ezra Klein 的 <cite>Abundance</cite>
+                  所以這麼愛用這個詞）的時代，我們從為了食物而勞動轉變成為追求食物的品味以及健身文化。依賴
+                  AI
+                  也會讓我們喪失了一些能力，但也可能會催生新的能力。就如計算機的出現讓我們不必像黎曼或高斯一樣大量用紙筆做計算，我們失去了像黎曼那個時代透過大量計算洞察出黎曼猜想的能力，但我們現在具有能用
+                  AI
+                  或是電腦從大量數據中找尋規律的能力。不論你喜歡或不喜歡，這種交換都會存在。
+                </p>
+              </li>
+              <li>
+                <p>
+                  我認為在 AI
+                  的時代，數學家與數學家之間的交流還是最重要的，跟 AI
+                  通靈沒辦法替代在物理空間裡與人類討論數學的經驗。但我也的確擔心
+                  AI 出現之後數學家之間（不得不）更原子化了。例如，在 AI
+                  時代以前跟別人交流自己正在思考正在做的問題，只要不涉及明確的敘述與細節基本上不用太擔心，也還是一個值得被鼓勵的行為。但是現在，可能大家就要思考光是交給對方敘述跟粗略想法，對方如果道德低下回家跟
+                  AI
+                  通靈一下明天就可以寫好論文上網了。我也還在思考在現在這個時代要如何把握這個度。
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <p><strong>AI 揭露：</strong>本篇文無任何 AI 使用。</p>
+
+          <p>
+            <strong>P.S.</strong>
+            我也沒有要否認 AI
+            對於社會、政治以及人類整體的威脅。我的擔憂就跟費馬的證明一樣空白太小寫不下了。
+          </p>
+
+          <p>
+            <strong>P.S.S.</strong> 今天 GPT 6 Astra
+            發佈了。很有可能我以上說的完全過時了。
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <script src="../../theme.js?v=20260809-6" defer></script>
+
+    <script
+      data-goatcounter="https://coryhou.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
+  </body>
+</html>

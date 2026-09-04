@@ -1546,6 +1546,36 @@ a.useful-link-card:hover {
   margin: 0 0 1.35rem;
 }
 
+.essay-post .review-body section {
+  margin-top: 2.75rem;
+}
+
+.essay-post .review-body h2 {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.essay-post .review-body ol {
+  margin: 0 0 1.75rem;
+  padding-left: 1.6rem;
+}
+
+.essay-post .review-body li {
+  padding-left: 0.25rem;
+}
+
+.essay-post .review-body li::marker {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.essay-post .review-body li > p:last-child {
+  margin-bottom: 1.5rem;
+}
+
 .review-body blockquote {
   margin: 2rem 0;
   border-left: 3px solid var(--accent);

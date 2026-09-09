@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A Semi-Vibe Mathematician’s Apology by Yu-Chi Hou."
+    />
+    <meta name="theme-color" content="#f6f6f1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<strong>A Semi-Vibe Mathematician’s Apology</strong>" />
+    <meta
+      property="og:description"
+      content="A Semi-Vibe Mathematician’s Apology by Yu-Chi Hou."
+    />
+    <meta
+      property="og:url"
+      content="https://yu-chihou.github.io/essays/half-vibe-mathematician/english.html"
+    />
+    <link
+      rel="canonical"
+      href="https://yu-chihou.github.io/essays/half-vibe-mathematician/english.html"
+    />
+
+    <link rel="alternate" hreflang="zh-Hant" href="https://yu-chihou.github.io/essays/half-vibe-mathematician/" />
+    <link rel="alternate" hreflang="en" href="https://yu-chihou.github.io/essays/half-vibe-mathematician/english.html" />
+
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("yu-theme");
+          const systemDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+
+          document.documentElement.dataset.theme =
+            savedTheme || (systemDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+
+    <title><strong>A Semi-Vibe Mathematician’s Apology</strong> | Yu-Chi Hou</title>
+
+    <link rel="icon" href="../../favicon.svg?v=4" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="../../favicon-32.png?v=4"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../../apple-touch-icon.png?v=4"
+      sizes="180x180"
+    />
+    <link rel="stylesheet" href="../../styles.css?v=20260904-2" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="header-tools">
+          <a
+            class="brand"
+            href="../../index.html"
+            aria-label="Yu-Chi Hou home"
+            title="Home"
+          >
+            <img
+              src="../../apple-touch-icon.png?v=4"
+              alt=""
+              width="38"
+              height="38"
+            />
+          </a>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            title="Change theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          </button>
+        </div>
+
+        <nav aria-label="Primary navigation">
+          <a href="../../index.html">Home</a>
+          <a href="../../research.html">Research</a>
+          <a href="../../activities.html">Activities</a>
+          <a href="../../misc.html" aria-current="page">Misc</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="review-page">
+      <article class="review-post essay-post" aria-labelledby="essay-title">
+        <a class="review-back" href="../../misc.html">← Back to Misc</a>
+
+        <header class="review-post-header">
+          <p class="section-kicker">Essay</p>
+          <h1 id="essay-title"><strong>A Semi-Vibe Mathematician’s Apology</strong></h1>
+          <p class="review-meta">Yu-Chi Hou · September 4, 2026</p>
+          <p><a href="./" lang="zh-Hant" hreflang="zh-Hant">中文版</a></p>
+        </header>
+
+        <div class="review-body">
+<p>Hardy begins <em>A Mathematician’s Apology</em> by writing: “A mathematician’s function should be to do something useful—to prove theorems and discover new mathematics—not to talk about himself or about what other mathematicians have done.” In an age when AI has already automated the proof and verification of many conjectures and mathematicians are basically about to become unemployed (not really). I, a semi-vibe mathematician who is already semi-obsolete, would like to offer a feeble defense of my use of the wicked AI. Along the way, I also want to record some thoughts on the various attitudes mathematicians have adopted toward this supposed existential crisis.</p>
+
+<section aria-labelledby="section-one">
+<h2 id="section-one"><strong>I.</strong></h2>
+
+<p>I have recently used Rethlas, an AI harness designed specifically to prove mathematical statements automatically, to explore several problems.</p>
+
+<ol>
+
+<li>
+<p>First, after discussing the matter with my advisor, we discovered that the following approach works much better than simply typing a prompt directly into Rethlas or Codex: write a three- or four-page PDF containing the precise statement of the problem, all the notation, possible strategies, and counterexamples to strategies that cannot work; then have GPT convert it into a Markdown file and feed that file into the system.</p>
+<p>I think this process is useful for the human mathematician—meaning me—as well. It forces me to clarify exactly what I am trying to prove and to organize the notation.</p>
+<p>I first tested this method on a conjecture of Demailly’s that I had encountered while searching the literature during an experiment in having AI generate a mathematical paper. Rethlas did not produce anything fundamentally new. It simply tried to prove every special case it was capable of handling.</p>
+</li>
+
+<li>
+<p>Next, I tried a problem on which my collaborator and I had been stuck for about six months. Roughly speaking, the problem was to prove that one sequence of functions converges to another function, except that the variables themselves were also functions.</p>
+<p>After running for eight hours and consuming about 30 percent of the weekly allowance on my $100 Pro subscription, the AI used a determinant identity that I already knew—but had never thought would be useful—together with some standard inequality arguments to prove a kind of contraction mapping principle. This reduced the original problem to showing that a certain <span class="math-operator">lim inf</span> admits a pointwise lower bound.</p>
+</li>
+
+<li>
+<p>I then rewrote the problem using this simplified formulation and ran Rethlas again. After another eight hours, it became stuck and stopped making progress. I eventually lost patience, terminated the run, and began using AI to organize the Markdown file it had produced.</p>
+<p>It claimed that it could solve the problem in a special case using a technique I had never seen before, which I later traced back to a French-language paper. Everything after that point, however, was complete nonsense.</p>
+<p>I then spent three days trying to finish the argument along the line of thought that the AI had initiated. After discussing it with my collaborator and my advisor, the argument currently appears to be correct—I hope.</p>
+<p>Interestingly, while I was discussing this with my advisor today, he suddenly realized that AI had suggested a similar construction to him in one of his recent papers. His conclusion was that this technique may once have been widely known within the early French school of pluripotential theory. It may be buried somewhere in a published volume of seminar proceedings, only to have been forgotten by those of us in the younger generation (My advisor remarked that the pioneers are probably laughing at us).</p>
+</li>
+
+</ol>
+
+</section>
+
+<section aria-labelledby="section-two">
+<h2 id="section-two"><strong>II.</strong></h2>
+
+<p>What, then, is the difference between the current version of AI and a human mathematician? Judging from my own experience, and from the cases familiar to me in which AI has apparently solved mathematical problems, I would describe the difference as follows.</p>
+
+<ol>
+
+<li>
+<p>AI has enormous patience and a broad familiarity with the literature. It will sometimes pursue paths that human beings abandon or overlook because of various prejudices.</p>
+<p>Take the eighth of the ten conjectures that OpenAI reported solving with Astra for example, all the ideas and tools needed for the solution were already present in the human mathematical literature. The difficulty was that computations and estimates previously carried out in simpler situations now had to be performed in a much more complicated setting. AI bravely—if I may put it in this way—attempted a route that no human mathematician had been willing to attempt.</p>
+<p>Something similar happened in the problem my advisor and I were considering. Because of our ignorance, we never dared to try a technique that may already have been discovered by mathematicians in the 1970s or 1980s. AI unearthed the technique and taught it to us again.</p>
+</li>
+
+<li>
+<p>Another consequence of the specialization of modern mathematics is that the range of knowledge possessed by any individual mathematician is necessarily quite limited. Sometimes a problem requires tools that lie far outside the arsenal normally available to experts on that problem.</p>
+<p>For example, the recent—possibly correct—construction of a complex structure on the six-sphere required both a highly complicated explicit construction and extensive topological computations. One of my collaborators remarked that it was difficult to imagine the complex geometers interested in this problem being able to carry out such a concrete construction themselves.</p>
+<p>AI is also extremely good at calculation. It can perform enormous  detailed work that would be almost unimaginable for a human being to do by hand. For example, the construction in Liu’s paper on the counterexample to the YTD conjecture required adjusting many different parameters until all the desired conditions were held simultaneously.</p>
+</li>
+
+<li>
+<p>To anthropomorphize it, the current AI resembles a mathematician who is not especially brilliant by the standards mathematicians normally use, but who is exceptionally diligent and extremely well-read.</p>
+<p>So far, it has not demonstrated the ability to step entirely outside the framework of the existing literature, propose a radically different way of thinking, or invent a concept or theory unlike anything human beings have previously seen.</p>
+<p>Perhaps 70 percent of historically unsolved conjectures (a completely imprecise estimate) were really consequences of an attention bottleneck. There were not enough mathematicians with enough time to explore enough possible paths. Even when someone did try a promising path, they might take a wrong turn, enter a dead end, and abandon it.</p>
+<p>AI can spend sixteen hours finding a clue that might take me two months to discover—or that I might never discover at all.</p>
+</li>
+
+</ol>
+
+</section>
+
+<section aria-labelledby="section-three">
+<h2 id="section-three"><strong>III.</strong></h2>
+
+<p>Now that AI is capable of solving conjectures that human beings had previously been unable to solve, I recently encountered someone who said to me:</p>
+
+<blockquote><p>“Once we use AI to solve all the good problems, what will mathematicians do? Mathematics will be left completely directionless.”</p></blockquote>
+
+<p>I disagree with the idea that allowing people—or AI companies—to use large language models to sweep through conjectures is equivalent to killing the goose that lays the golden eggs, and that mathematics will therefore come to an end.</p>
+
+<ol>
+
+<li>
+<p>First of all, is mathematical research really identical with solving conjectures?</p>
+<p>One reason mathematicians place such a high status on conjectures is that, in the course of solving certain conjectures, people introduced new concepts that eventually developed into entire fields of mathematics. Within those fields, mathematicians formulated further questions, producing layer upon layer of the vast mathematical system we have today.</p>
+<p>Some ancient conjectures with statements that are easy to understand may require centuries of mathematical development before they can be answered. Fermat’s Last Theorem, formulated in 1637 and proved in 1994, is one example.</p>
+<p>For this reason, many mathematicians say that the conjecture itself is not important; the process is what matters. A good problem is good precisely because it can serve as a vehicle that guides generations of mathematicians. In trying to answer it, they develop tools and techniques, which then grow into theories and entire mathematical fields.</p>
+<p>I agree with all of this. It accurately describes the historical development of mathematics.</p>
+</li>
+
+<li>
+<p>Nevertheless, a conjecture is usually a question that earlier mathematicians formulated while investigating some phenomenon but were unable to solve themselves. Such questions generally have very precise statements.</p>
+<p>As AI becomes—or perhaps has already become—extremely good at solving precisely formulated problems of this kind, I believe that, for the foreseeable future, the central task of mathematicians will be to ask interesting but initially vague questions, understand the phenomena behind those questions, and discover the correct hypotheses and formulations that will allow either humans or AI to prove something.</p>
+<p>Many people know that Perelman, building on Hamilton’s work, solved one of the Millennium Prize Problems. Fewer people recognize that Thurston was the person who set out the program for everything to become possible. Thurston proposed a program describing how three-dimensional manifolds should be decomposed into pieces modeled on eight different geometries. Hamilton subsequently developed Ricci flow in an attempt to realize that picture, and Perelman came in with brilliant new ideas to overcome the difficulty of Hamilton’s program and carry to the finish line.  Can AI solve a problem at that level? I do not know. My guess is that we may have to wait quite a while, although I may, of course, be completely wrong. </p>
+<p>Current systems have not yet demonstrated the ability to formulate and clarify vague questions of this kind. I also do not know how one would design a benchmark capable of training or measuring such an ability.</p>
+</li>
+
+<li>
+<p>From my perspective, it is good that Claude solved the decades-old Hopf conjecture concerning the existence of a complex structure on the six-sphere. Let us now think about a harder problem. What about Yau’s conjecture that every almost complex manifold of dimension six or higher admits a complex structure? Compared with that problem, the Hopf conjecture is almost child’s play.</p>
+<p>Perhaps AI will find a counterexample. That would be excellent. We could then ask for the correct characterization: under what conditions does such a complex structure exist?</p>
+<p>Scientists constantly repeat that whenever one problem is solved, ten new problems appear. Why are people unable to maintain the same attitude once AI joins the ranks of those solving the problems?</p>
+</li>
+
+</ol>
+
+</section>
+
+<section aria-labelledby="section-four">
+<h2 id="section-four"><strong>IV.</strong></h2>
+
+<p>I would like to go further and ask why so many mathematicians are so deeply attached to conjectures that the arrival of AI produces a sense of existential crisis—and why they blame AI for the various forms of mathematical disorder we are now witnessing.</p>
+
+<p>I believe these disorders arise from a growing friction between inherited cultural inertias and the actual development of mathematics—or, to use the language of AI, from misalignment.</p>
+
+<p>The appearance of AI has merely taken a patient who was previously visiting an outpatient clinic and sent them directly into the intensive care unit.</p>
+
+<ol>
+
+<li>
+<p>Let us borrow a framework from <a href="https://www.youtube.com/watch?v=M0--ZH1lOzg">Terence Tao’s ICM lecture </a>describing the life cycle of a piece of mathematical work:</p>
+<blockquote><p>Proof generation ⟶ Proof verification ⟶ Proof exposition ⟶ Proof publication ⟶ Proof canonicalization.</p></blockquote>
+<p>Historically, we have placed far too much emphasis on the first two stages. Most of the attention and credit go to the person who produces the proof of a problem. We call this quality “originality,” and we use it to evaluate a mathematician’s ability and achievements. Academic institutions then use those evaluations in hiring and promotion.</p>
+<p>The incentive structure</p>
+<blockquote><p>solve a difficult conjecture ⟶ receive a high evaluation for originality</p></blockquote>
+<p>may have very deep roots in mathematical culture.</p>
+<p>Even before the modern academic system was established, much of modern mathematics grew out of the mathematical duels conducted by European mathematical geniuses such as the Bernoulli brothers, Euler, and Newton in their spare time.</p>
+<p>This attitude survives in the contemporary academic system. Nowadays, we believe that the best mathematicians should “prove new results,” while verification, digestion, reconstruction, refinement, and popularization are treated as secondary activities.</p>
+</li>
+
+<li>
+<p>Even before AI appeared, the incentives of this system of academic production encouraged some academic opportunists to spend all their time chasing fashionable areas, rushing to claim problems and conjectures, and publishing valueless papers in order to compete for jobs and promotions.</p>
+<p>The practice of caring less about mathematics but more about mass-producing papers and wishing to publish them in prestigious journals—had already pushed the peer-review system close to collapse. Of course, such behavior is not accepted by “good” mathematicians. But the community has mostly muddled through, believing that journal hierarchies and hiring procedures will eventually filter these people out or assign them lower evaluations.</p>
+<p>In the AI era, however, some people behave like gamblers in Vegas. They spend thousands of dollars each month on API calls, making one-shot attempts to sweep through several or even dozens of conjectures at once. They watch to see which conjecture can be solved immediately, then have AI formalize or verify the result in Lean and post it online. In many cases, the text has obviously been generated directly by AI and uploaded with little human intervention. I believe they behave this way because they are still thinking according to the old incentive structure and the old model of academic production.</p>
+<p>Human beings can now use AI to produce, on an industrial scale, papers that would have counted as “highly original” under the old standards. These papers are overwhelming the journal-review system and will eventually distort the hiring system as well.</p>
+</li>
+
+<li>
+<p>At the same time, we have seriously underestimated the final three stages in Tao’s framework.</p>
+<p>Under the traditional system of evaluation, we regard writing surveys and expository articles as less important than proving a conjecture. Such articles almost never appear in the most prestigious journals, because those journals demand “original new mathematics,” and survey articles generally do not help anyone get promoted.</p>
+<p>We go even further and imagine that only second-rate mathematicians or retired mathematicians write textbooks. Hardy would probably have agreed with that judgment.</p>
+<p>But is reorganizing, decomposing, and explaining known results more clearly really an inferior form of mathematical activity?</p>
+<p>In 1964, Heisuke Hironaka, who passed away recently, published a roughly hundred-page proof of resolution of singularities in algebraic geometry in the <em>Annals of Mathematics</em>. By the standards of the 1960s, this proof was almost a monster. Everyone believed that it was correct, and mathematicians used the theorem constantly, but very few people genuinely wanted to understand all the details.</p>
+<p>Often, one only needs the final conclusion of a theorem. But sometimes one must understand the details of the original proof in order to fine tune the argument  and prove something else.</p>
+<p>It was not until roughly thirty years later that mathematicians began making sustained efforts to simplify Hironaka’s proof. Today, there are textbook treatments of his theorem that can be read by graduate students with basic training in algebraic geometry.</p>
+<p>As Tao has emphasized, for a mathematical result to become truly useful, it must leave the pages of the journal. It must be accepted and understood by the mathematical community, and it must be applied to other problems.</p>
+</li>
+
+<li>
+<p>Even before AI, mathematicians joked that nobody reads or corrects other people’s papers. We see a result, use it, and single-mindedly  work on our own problems, because that is the only reliable way to survive in the academic system.</p>
+<p>Unless we change the incentive structure, and unless we reconsider the centuries-old hierarchy in mathematicians’ minds that places “original results” above everything else, the competition to use AI to claim conjectures will continue indefinitely. What, then, should we do? Should we use AI, or should we not? I believe the worst possible response is denial and escaping responsibility. This is especially true for senior mathematicians and those leaders in each field. They have a responsibility to navigate the discussion about new professional norms and incentive structures.</p>
+<p>They should not retreat into the security of their prestigious academic positions, declare their commitment to artisanal, handmade mathematics, and leave students and younger practitioners to confront all the unknown risks by themselves.</p>
+</li>
+
+</ol>
+
+</section>
+
+<section aria-labelledby="section-five">
+<h2 id="section-five"><strong>V.</strong></h2>
+
+<p>Of course, I do not mean to deny the negative effects that AI may have on mathematicians.</p>
+
+<ol>
+
+<li>
+<p>Tao has used food as an analogy. In an age of food abundance (I wonder whether he borrowed this from Ezra Klein’s <em>Abundance</em>), we move from laboring in order to obtain food toward cultivating taste and developing a fitness culture. Dependence on AI will likewise cause us to lose certain abilities, while perhaps producing new abilities in their place.</p>
+<p>The invention of the calculator means that we no longer have to perform enormous  computation with pen and paper, as Riemann or Gauss did. We may have lost the kind of ability that allowed Riemann to discover the Riemann hypothesis through extensive computation. On the other hand, we now possess the ability to use computers and AI to search for patterns in enormous quantities of data.</p>
+<p>Whether one likes this exchange or not, it will take place.</p>
+</li>
+
+<li>
+<p>I believe that, even in the age of AI, communication between mathematicians remains the most important part of mathematics. Communicating with an AI oracle cannot replace the experience of discussing mathematics with another human face to face. At the same time, I genuinely worry that the arrival of AI will make mathematicians more atomized—and perhaps force them to become more atomized.</p>
+<p>Before the AI era, discussing a problem one was currently thinking about was generally safe and worth encouraging, provided that one did not disclose an exact statement or all the technical details.</p>
+<p>Today, however, people may have to be more cautious. Merely giving someone the statement of a problem and a rough idea may be enough for an unethical person to go home, commune with AI for an evening, and upload a completed paper the next day. I myself is still trying to navigate this in this new era.</p>
+</li>
+
+</ol>
+
+</section>
+
+<p><strong>AI disclosure:</strong> No AI was used in writing the original Chinese version of this essay. AI was used to produce this English translation.</p>
+
+<p><strong>P.S.</strong> I also do not mean to deny the threats that AI may pose to society, politics, or humanity as a whole. My concerns, like Fermat’s proof, will not fit in the margin.</p>
+
+<p><strong>P.P.S.</strong> GPT-6 Astra was released today. There is a very good chance that everything I have written above is already obsolete.</p>
+
+<section aria-labelledby="addendum">
+<h2 id="addendum"><strong>Addendum — September 9, 2026</strong></h2>
+<p><em>Note: The original Mandarin version of this essay was written before Astra’s release and the dramatic developments surrounding Navier–Stokes. This addendum collects my initial reactions to both, originally shared privately on Facebook.</em></p>
+
+<section aria-labelledby="astra">
+<h3 id="astra"><strong>On Astra</strong></h3>
+<ol>
+
+<li>
+<p>In my experience, Astra really is faster and smarter. But it seems surprisingly difficult to get it to keep working on a problem for very long.</p>
+</li>
+
+<li>
+<p>Whenever I get a statement wrong or suggest some naïve approach that I think might work, it immediately came back with a counterexample.</p>
+</li>
+
+<li>
+<p>The write-ups it generates are still a pile of 💩. It remains far too fond of inventing terminology and introducing piles of unnecessary new notations.</p>
+</li>
+
+<li>
+<p>It still has not managed to solve the Demailly conjecture I tried earlier.</p>
+</li>
+
+</ol>
+</section>
+
+<section aria-labelledby="ns">
+<h3 id="ns"><strong>On NS:</strong></h3>
+<ol>
+
+<li>
+<p>I am surprised that OAI could catch up and surpass the result obtained by Alpöge-Buckmaster in 88 hrs with tremendous amounts of resources (10000 agents, ~$15M).</p>
+</li>
+
+<li>
+<p>Several people have pushed back on my earlier argument: perhaps, given this kind of enormous resources and a reasonable amount of time, AI really could develop new theories and tackle the vague questions I described above.</p>
+<p>I remain skeptical. At least as far as I can tell, even the NS example does not yet demonstrate that capability. But I also doubt that any ordinary mathematical research institution has the resources to test this hypothesis on a comparable scale.</p>
+</li>
+
+<li>
+<p>OpenAI also needs to clarify exactly what its training opt-out covers, particularly in light of <a href="https://x.com/markchen90/status/2097400166554993041">this response</a>. Its published policy says that new conversations will not be used for training after a user opts out.</p>
+</li>
+
+<li>
+<p>Finally, I agree with <a href="https://mathstodon.xyz/@tao/117237320796901560">Tao’s warning</a>:</p>
+<blockquote><p>We have now seen that even the rumor of someone working on a problem can trigger a massive amount of AI-powered effort to flatten it before the original research project has time to reach its full potential. The incentives may now be pointing in the direction of no longer sharing any promising research directions with the broader community, which would reverse centuries of traditions of open science and do serious long-term damage to the future of the field.</p></blockquote>
+</li>
+
+</ol>
+</section>
+
+</section>
+        </div>
+      </article>
+    </main>
+
+    <script src="../../theme.js?v=20260809-6" defer></script>
+
+    <script
+      data-goatcounter="https://coryhou.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
+  </body>
+</html>
+

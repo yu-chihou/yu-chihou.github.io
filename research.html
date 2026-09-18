@@ -28,6 +28,21 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png?v=4" sizes="180x180" />
     <link rel="stylesheet" href="styles.css?v=20260822-1" />
     <link rel="stylesheet" href="research-tabs.css?v=20260810-2" />
+    <style>
+      .research-note-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .research-note-body p {
+        margin: 0;
+        color: var(--body-copy);
+      }
+
+      .research-note-body p + p {
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -144,6 +159,37 @@
           <details class="research-group">
             <summary>Notes (Not intended to publish)</summary>
             <div class="research-list">
+              <article class="research-card research-note-card">
+                <div>
+                  <p>Research note</p>
+                  <h2>
+                    <a href="documents/mabuchi-geometry-relative-to-i-model-potentials.pdf">Mabuchi Geometry Relative to I-Model Potentials</a>
+                  </h2>
+                </div>
+                <section class="research-note-body" aria-label="Abstract and AI disclosure">
+                  <p>
+                    <strong>Abstract.</strong> We construct a complete geodesic metric <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>d</mi><mrow><mi>p</mi><mo>,</mo><mi>φ</mi></mrow></msub></math> on the
+                    relative finite energy space <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi mathvariant="script">E</mi><mi>p</mi></msup><mo>(</mo><mi>X</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>φ</mi><mo>)</mo></math> for every
+                    <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>≥</mo><mn>1</mn></math>, where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>θ</mi></math> represents a big cohomology class
+                    and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>φ</mi></math> is an <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="script">I</mi></math>-model potential of positive mass.
+                    The construction extends Gupta's approximation method by
+                    establishing continuity of relative envelopes under
+                    <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>d</mi><mi mathvariant="script">S</mi></msub></math>-approximation of singularity types.
+                  </p>
+                  <p>
+                    <strong>AI disclosure.</strong> This note grew out of the author's investigation of a different
+                    problem. The author and his advisor, Tamás Darvas, had previously
+                    considered the possibility of extending Gupta's construction
+                    in <a href="https://arxiv.org/abs/2401.01688" title="Prakhar Gupta, Complete Geodesic Metrics in Big Classes">[Gup25]</a> to <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="script">I</mi></math>-model potentials through
+                    approximation in the <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>d</mi><mi mathvariant="script">S</mi></msub></math>-metric by potentials
+                    of analytic singularity type. The author used GPT 6 Astra to help develop and revise the
+                    detailed arguments, identify gaps, and check citations.
+                    The author subsequently checked, refined, and rewrote the
+                    arguments. GPT 6 Astra also assisted with language editing.
+                  </p>
+                </section>
+              </article>
+
               <article class="research-card">
                 <div>
                   <p>Research note</p>

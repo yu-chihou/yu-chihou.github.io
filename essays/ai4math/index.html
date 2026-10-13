@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="關於 AI、數學理解，以及研究、學術制度與教育應如何改變的幾點想法。"
+    />
+    <meta name="theme-color" content="#f6f6f1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="關於 AI 與數學的幾點想法" />
+    <meta
+      property="og:description"
+      content="關於 AI、數學理解，以及研究、學術制度與教育應如何改變的幾點想法。"
+    />
+    <meta
+      property="og:url"
+      content="https://yu-chihou.github.io/essays/ai4math/"
+    />
+    <link
+      rel="canonical"
+      href="https://yu-chihou.github.io/essays/ai4math/"
+    />
+
+    <link rel="alternate" hreflang="zh-Hant" href="https://yu-chihou.github.io/essays/ai4math/" />
+    <link rel="alternate" hreflang="en" href="https://yu-chihou.github.io/essays/ai4math/english.html" />
+
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("yu-theme");
+          const systemDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+
+          document.documentElement.dataset.theme =
+            savedTheme || (systemDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+
+    <title>關於 AI 與數學的幾點想法 | Yu-Chi Hou</title>
+
+    <link rel="icon" href="../../favicon.svg?v=4" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="../../favicon-32.png?v=4"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../../apple-touch-icon.png?v=4"
+      sizes="180x180"
+    />
+    <link rel="stylesheet" href="../../styles.css?v=20260904-2" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="header-tools">
+          <a
+            class="brand"
+            href="../../index.html"
+            aria-label="Yu-Chi Hou home"
+            title="Home"
+          >
+            <img
+              src="../../apple-touch-icon.png?v=4"
+              alt=""
+              width="38"
+              height="38"
+            />
+          </a>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            title="Change theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          </button>
+        </div>
+
+        <nav aria-label="Primary navigation">
+          <a href="../../index.html">Home</a>
+          <a href="../../research.html">Research</a>
+          <a href="../../activities.html">Activities</a>
+          <a href="../../misc.html" aria-current="page">Misc</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="review-page">
+      <article class="review-post essay-post" aria-labelledby="essay-title">
+        <a class="review-back" href="../../misc.html">← Back to Misc</a>
+
+        <header class="review-post-header">
+          <p class="section-kicker">Essay</p>
+          <h1 id="essay-title">關於 AI 與數學的幾點想法</h1>
+          <p class="review-meta">Yu-Chi Hou · October 12, 2026</p>
+          <p><a href="english.html" lang="en" hreflang="en">English version</a></p>
+        </header>
+
+        <div class="review-body">
+<p><strong>AI 使用揭露：</strong>本文先以英文寫成，再翻譯成中文。撰寫過程中，我使用 ChatGPT 協助梳理與收束論述、潤飾英文、翻譯。</p>
+
+<section aria-labelledby="section-1">
+<h2 id="section-1">晚餐上的炸彈</h2>
+
+<p>炸彈是在討論班晚餐上，開胃菜剛吃完、主菜還沒上的空檔落下的。當時在場的有我的指導教授、另一位系上的教授、一群包括我在內的研究生，以及講者，也是我的師公。更諷刺的是，他原本打算介紹自己在 Griffiths 猜想上的研究進展。但九月下旬，兩組研究者分別在 AI 的協助下找到了反例，因此他只好改變計劃，講解了他們的工作。當我們聽見空襲警報，我放下叉子、抓起手機，找到 GitHub 上剛發布的那份檔案，快速掃過上面的受害者名單：log abundance、Fujita 猜想、Mahler 猜想，以及嗯，又一個 Griffiths 猜想的反例。我早就知道 OpenAI 這批論文要來了，但真的親眼看見，還是感覺超現實。我不禁想，有多少聽到消息的數學家，那天晚上還能安穩入睡。</p>
+
+<p>對我來說，AI 強大的定理證明能力，自從夏天以來就已經非常明顯了。它發現了我忽略的技巧，也幫助我在研究問題的一個重要特殊情況上取得進展。當時的感想與經驗，我已經在 Astra 發布當天寫在<a href="https://yu-chihou.github.io/essays/half-vibe-mathematician/">這裡</a>了。幾天後，在 OpenAI 宣布其 Navier–Stokes 結果的那一天，我讀到了 David Bessis 一篇非常棒的文章：<a href="https://davidbessis.substack.com/p/the-fall-of-the-theorem-economy"><em>The Fall of the Theorem Economy</em></a>（我也<a href="https://www.facebook.com/corykiki/posts/28831807353079160">翻譯了這篇文章</a>）。這篇文章對我們身邊正在發生的變化，提供了深刻的哲學層次分析，而我也同意其中幾乎所有的論點。但作為一個博士生，我發現形上學層次的討論，並不能真正緩解我的焦慮。當我和朋友們討論這些事情時，不斷回到的問題是：「那我們該怎麼做？」我們需要一場更接地氣的對話。然而，圍繞這個話題、來自數學家自身與社會大眾的噪音，卻讓這場對話更難進行。</p>
+
+</section>
+
+<section aria-labelledby="section-2">
+<h2 id="section-2">面對現實</h2>
+
+<p>在 OpenAI 宣布 Navier–Stokes 的結果之後，28 位菲爾茲獎得主發表了一篇<a href="https://mathandai.org/">宣言</a>。他們主要擔心的是，競相解決問題的風潮，可能破壞那些將結果轉化為共同數學理解所需要的工作。我連署了這份宣言，現在仍然支持它的論點。與此同時，我也聽到一些同事希望 AI 公司終究會對數學失去興趣，讓我們回到過去的美好時光。我理解這種心情，但我不認為我們能把應對方式建立在這個期待上。</p>
+
+<p>我想對我的數學家同事前輩們說：大家請面對現實吧，我們回不去了。</p>
+
+<p>過去一個月的發展已經很清楚地顯示，無論我們發表多少宣言，又有多少數學家連署，我們不能指望一個<a href="https://www.goldmansachs.com/insights/articles/global-investment-is-forecast-to-exceed-1-trillion-in-2026">今年預計吸引約一兆美元投資的行業</a>領頭羊，會因區區數學界的反對就改變作為。即使 OpenAI 或 Anthropic 宣稱「數學已經解決了」，然後轉向其他事情，仍然會有許多公司迫不及待地想在我們的領域裡大顯身手秀肌肉（還可能比前兩家更下作）。</p>
+
+<p>我並不想也沒能力浪費一篇文章對這些公司喊話。我反而覺得數學家已經對 AI 公司投入太多情緒與憤怒。但問題是他們不是唯一的壞人，同樣的問題也存在於我們自己社群之中。自從暑假以來，我已經看到一些數學家不斷把 AI slop 灌進 arXiv 插旗搶結果，有些甚至沒有揭露 AI 使用。我們需要檢視現行制度與文化鼓勵這些行為的誘因，並思考數學家能改變什麼，讓數學作為一門科學，在 AI 進展的情況下有韌性地持續發展。</p>
+
+<p>在繼續之前，我想先回應一種對數學界憂慮的常見反應：如果數學的目標就是證明定理，而 AI 比人類更擅長產出經過驗證的證明，那數學家有什麼好不高興的？難道我們只是無法接受奇點到來、把持門戶的馬車伕嗎？容我借用 Bessis 的話來回應：</p>
+
+<blockquote><p>「無法理解的數學，其問題不在於它可能是錯的，而在於它確實毫無意義：它無法在目前唯一能理解它並體會其價值的硬體——人腦——上編譯執行。〔……〕在某個可能不遙遠的未來，能夠賦予意義並追尋真理的人工架構必然會出現，而且在某個時刻，它們很可能在數學創造力的各個面向超越人類，包括將形式化證明整理、整合進既有知識體系的工作。〔……〕然而，這絕對不是我們當下的現實，也不是目前趨勢直接延伸就能得到的結果。」</p></blockquote>
+
+<p>如果我們同意，無論 AI 的進展如何，只要人類還存在、仍然在乎數學，那麼數學作為一門科學的目標就是<strong>建立並分享人類對數學的理解</strong>。Thurston 就很清楚地表達過：</p>
+
+<blockquote><p>「我們並不是在試圖達成某種抽象的定義、定理與證明生產配額。衡量我們是否成功的標準，是我們所做的事情，能否讓人們更清楚、更有效地理解與思考數學。」</p></blockquote>
+
+<p>以這個目標來看，Daniel Litt 在他那篇廣為流傳的<a href="https://www.daniellitt.com/blog/2026/8/11/the-end-of-mathematics/">悲觀文章</a>中提出的制度問題非常迫切。我們需要制度上的系統性改革，也需要改變自己的心態。如果不改變，我看不到數學以及未來投入這個領域的人可持續的未來。如果數學家自己都無法形成共識、改革既有的文化，就更無法說服公眾投入數學研究以及數學教育的必要性。</p>
+
+</section>
+
+<section aria-labelledby="section-3">
+<h2 id="section-3">當替代指標不再有效</h2>
+
+<p>長久以來，證明一個有分量的定理，一直是衡量背後數學工作的替代指標：發展概念、辨識規律、連結不同領域，以及設法突破前人無法克服的障礙。我們無法直接衡量所有這些貢獻，但一個重要的定理提供了具體的成果，讓我們能夠給予承認與獎勵。於是，優先權、論文發表與期刊聲望，成了評價數學家的核心。David Bessis 就指出這套制度背後的文化：</p>
+
+<blockquote><p>「定義值零分，闡述性的工作算負分，最好的職位永遠應該留給證明了最困難定理的人……他們感嘆這套制度對證明優先權的病態執著，儘管大家都知道，真正辛苦的工作往往發生在這個循環之外，也就是試著理解既有結果的時候。然而，到了公開場合，他們仍然受到數學家榮譽守則的束縛：證明定理，然後閉嘴！」</p></blockquote>
+
+<p>這樣的文化跟制度設計本來就有很多問題。正如我在<a href="https://yu-chihou.github.io/essays/half-vibe-mathematician/">之前的文章</a>中討論的，解釋、簡化與整理數學，往往不如證明新結果受到重視（可以看看 Bessis 文中引用的 Hardy 言論）。即便如此，過去數學家也在這樣的制度下，數百年來安穩度日，數學也成為一個大帳篷，承接著形色各異的數學家。</p>
+
+<p>然而，現在取得結果與建立其背後的理解之間的關聯性正在受到 AI 衝擊。陶哲軒在把證明定理比作登頂的<a href="https://www.quantamagazine.org/the-ai-revolution-in-math-has-arrived-20260413/">譬喻</a>中，將 AI 系統比作跳躍機器人，能夠「靠跑酷登上六英尺高的牆」。如果我們延伸他的比喻，今天的 LLM 或許已經是（或很快就是）能把我們直接送上某些山頂的直升機。如此一來，登上山頂這件事，能告訴我們關於攀登者的攀登能力就少得多了。同樣地，如今單憑一個以某人名義宣布的定理，我們越來越難判斷這個人究竟貢獻了什麼，又理解了多少。</p>
+
+<p>如果目前的獎勵結構不變，我們可以預期，會有更多人持續用 AI 抽卡競搶結果。他們可能沒有多少動機去檢視論證、辨識有用的想法，或把產出轉化為其他人能夠使用與學習的內容。來自數學社群其他人的反感，可能只會促使他們隱瞞 AI 的使用，把成果包裝成自己做的。隨著模型進步，或作者花更多心力掩飾產出，我們目前用以辨識 AI 生成文章的蛛絲馬跡，可能很快就會失效。我們不能把一套可持續的制度建立在整天玩這種偵探遊戲之上。</p>
+
+<p>如果這種趨勢持續演變下去，整個領域都可能變成一片核廢土：各種宣稱的結果不斷堆積，社群卻沒有足夠的時間或誘因去檢查，可靠的結果也越來越難與缺乏根據的敘述區分。即使一個證明被形式驗證為正確的，理解其中想法、讓其他人或 AI 能夠使用它所需要的工作，仍然可能無人願意接手。</p>
+
+<p>即使從 LLM 發展的角度來說，現在 LLM 吃下的是人類數百年來花費許多力氣與時間撰寫的文章書籍，我們並不知道 AI 的數學能力是否還能在未來這樣的廢土之上繼續成長。</p>
+
+</section>
+
+<section aria-labelledby="section-4">
+<h2 id="section-4">那我們該怎麼做？</h2>
+
+<p>回到促使我寫下這篇文章的問題，我不覺得有任何人可以完整而肯定地回答這個問題。舊秩序的習慣與期待，無論在數學家的社群內還是在公眾對數學的理解中，都已經根深蒂固。正如 Bessis 所說：</p>
+
+<blockquote><p>「這可能是歷史上最大規模的產品召回——我們向數十億人兜售了一個錯誤的數學觀念，如今帳單到期了。」</p></blockquote>
+
+<p>Bessis 在文章結尾探討了幾個可能的方向。在這裡，我拋磚引玉地提出四個稍微接地氣的初步建議。畢竟，包含我在內的年輕研究者們的未來，也取決於我們的社群如何回應。</p>
+
+<h3>第一，<strong>重塑獎勵制度與誘因結構。</strong></h3>
+
+<p>我們應該減少對證明優先權的強調，給予解釋、闡述，以及將結果整合進共同數學知識的工作更多承認。無論原始產出來自自己或他人使用的 AI，檢視論證、修補缺口、提煉概念、寫出清楚的文章，以及透過演講闡述新發現，本身都是獨立的數學貢獻。這些工作應該得到相應的認可與職涯機會。在上一篇文章中，我已經以廣中平祐的奇點解消為例。現在，我想再提名（及感謝）Philip Engel 透過<a href="https://arxiv.org/abs/2609.38442">文章</a>與<a href="https://video.renyi.hu/video/workshop-on-moduli-of-curves-abelian-varieties-and-k3-surfaces-1-1043">演講</a>，盡力解釋 Anthropic 員工用 Claude 夢到的六維球上的複結構。我和指導教授這週才討論到，或許我們可以從 OpenAI 最近公布的那批論文，或其他地方，挑一篇自己感興趣的 AI 生成文章，組織一個「AI slop 讀書會」。一起讀懂論證，再把學到的內容寫下來。我認為這本身就已經是值得承認的貢獻。有些人已經在做了，但我們需要更多人加入進來。</p>
+
+<p>這種轉變也能讓研究者更安心地使用 AI，也有動機誠實揭露 AI 的使用，因為他們的貢獻不必再依賴「自己證明一切」這種印象。這也可能減少公司競相搶結果造成的損害，因為在宣布結果之後，仍然有值得做、也能得到社會性獎勵的工作。我們的討論便能更直接地聚焦在數學本身：為什麼這個論證行得通？我們學到了什麼，之前漏掉了什麼？這些想法能帶來哪些進一步的發展？</p>
+
+<h3>第二，<strong>讓我們的制度支持這些貢獻。</strong></h3>
+
+<p>資深數學家，尤其是有能力影響制度決策的人，應該認真思考：在上述框架下，同儕審查、聘任與升等應該如何運作？對尚未取得終身職的人來說，這恐怕是最直接的焦慮。不論我們認為數學應該追求什麼，自己的職涯仍然取決於制度實際獎勵什麼。</p>
+
+<p>我只是一個博士生，當然沒資格提出一套成熟的替代制度。但當資深數學家談論如何留住年輕人時，我希望這些問題會是他們優先處理的事情。我們也應該承認並獎勵那些願意承擔責任、推動這些改變的人。至少，在同儕審查制度調整的過渡期，聘任與升等應該降低對發表篇數與期刊聲望的依賴。正如 Litt 在<a href="https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/">較為樂觀的那篇文章</a>中所主張的，演講與深入的數學討論，能更直接地展現研究者的理解與貢獻。最近關於數學博士教育的<a href="https://cmsa.fas.harvard.edu/media/2026/09/Summit-on-PhD-Math-Education-in-the-Age-of-AI.pdf">報告</a>也同樣建議採用嚴謹的當面評量與論文口試，而非主要依賴書面成果來判斷學生是否理解。</p>
+
+<p>這些評量方式也不會完美。但是，在我們熟悉的指標正變得越來越無法反映實況，同儕審查制度也承受著越來越大的壓力時，我們可能就別無選擇地依賴這些過去認為更困難、更主觀的評量方式。</p>
+
+<h3>第三，<strong>探索新的數學研究方式。</strong></h3>
+
+<p>LLM 可能讓過去看似遙不可及的研究與合作方式變得可行。例如，它們可能在跟其他領域的研究者的對話中，引入某些高深的數學工具，而這些研究者未必具備理解工具所需的背景。數學家可以協助說明工具如何運作、釐清它們的假設與限制，並根據眼前的問題加以調整或改進。相反地，LLM 可能幫助我們學習其他領域的語言、背景與方法，降低過去阻礙跨領域合作的門檻。透過這樣的交流，我們可能把更多數學帶入更廣泛的科學應用，也從中發現新的數學問題。</p>
+
+<p>更甚者，這些被應用的數學知識也有可能超出了傳統「應用數學」的範疇，而讓過去被歸類為「純數學家」的研究者們也能夠參與進來。傳統純數學與應用數學的分野可能會被打破，「純數學」除了來自於自己領域內生的問題之外，也能有來自其他學科問題意識的刺激。我們應該更願意探索陌生的問題、走出舒適圈與他人合作，並嘗試不同形式的數學研究。</p>
+
+<h3>第四，<strong>投入更多心力於教育與公眾溝通。</strong></h3>
+
+<p>我們需要向公眾說明，數學研究包含哪些工作、如何幫助我們理解世界，以及在 AI 能力不斷增強的時代，數學家能夠做些什麼。我們需要細緻地告訴社會，人類從事數學研究對於人類文化、科技與精神的重要性，來消解社會上一些人稱數學家對於 AI 公司的憤怒只是把持門戶的說法。</p>
+
+<p>這當然也包含數學教育。當 AI 能夠輕鬆代為產出答案時，學生更需要一個有說服力的解釋，來提供他們學習的動機：為什麼學習數學仍然重要？正如 Bessis 所說：</p>
+
+<blockquote><p>「我所擔心的是一種錯誤的信念：彷彿數學能力存在某種『正常』程度，彷彿某些概念比其他概念更『真實』或更『具體』，而高等數學只是無謂地抽象。〔……〕有些人預言，數學最終會變得像西洋棋一樣。〔……〕這是一種短視的看法，忽略了數學建構意義與追尋真理的面向，也忽略了數學訓練帶來的巨大認知益處。一旦你對數、集合、統計、線性代數、微積分、微分幾何、機器學習〔……〕有了直觀理解，這個世界就會變得更容易理解。」</p></blockquote>
+
+<p>隨著學生能使用的工具改變，我們的教學也應該幫助他們親身體會這些益處。我甚至認為這個改變不只是大學，更應該從小學就開始（因為有些小孩從那時就已經開始討厭數學，埋下陰影了）。除了例行的計算練習，學生也需要機會去探索規律、提出問題，並發現數學想法如何讓世界變得更容易理解。</p>
+
+</section>
+
+<section aria-labelledby="section-5">
+<h2 id="section-5">我們沒有時間再等下去</h2>
+
+<p>當前基礎科學面臨的<a href="https://www.nytimes.com/2026/10/02/us/politics/national-science-foundation-research-funds.html">輿論環境</a>，已經讓我們沒有多少餘裕安於現狀。我們需要面對現實，更快地採取行動。隨著研究工具改變，我們需要一套制度，能夠支持那些願意理解、發展與分享數學的研究者。對我這種仍在建立職涯的人而言，這些改變能否及時發生，會直接影響我們是否還能留在數學之中。</p>
+
+</section>
+
+        </div>
+      </article>
+    </main>
+
+    <script src="../../theme.js?v=20260809-6" defer></script>
+
+    <script
+      data-goatcounter="https://coryhou.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
+  </body>
+</html>
+

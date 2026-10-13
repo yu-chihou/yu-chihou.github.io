@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Yu-Chi Hou on AI, mathematical understanding, and changes to research, institutions, and education."
+    />
+    <meta name="theme-color" content="#f6f6f1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Some Thoughts on AI4Math" />
+    <meta
+      property="og:description"
+      content="Yu-Chi Hou on AI, mathematical understanding, and changes to research, institutions, and education."
+    />
+    <meta
+      property="og:url"
+      content="https://yu-chihou.github.io/essays/ai4math/english.html"
+    />
+    <link
+      rel="canonical"
+      href="https://yu-chihou.github.io/essays/ai4math/english.html"
+    />
+
+    <link rel="alternate" hreflang="zh-Hant" href="https://yu-chihou.github.io/essays/ai4math/" />
+    <link rel="alternate" hreflang="en" href="https://yu-chihou.github.io/essays/ai4math/english.html" />
+
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("yu-theme");
+          const systemDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+
+          document.documentElement.dataset.theme =
+            savedTheme || (systemDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+
+    <title>Some Thoughts on AI4Math | Yu-Chi Hou</title>
+
+    <link rel="icon" href="../../favicon.svg?v=4" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="../../favicon-32.png?v=4"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../../apple-touch-icon.png?v=4"
+      sizes="180x180"
+    />
+    <link rel="stylesheet" href="../../styles.css?v=20260904-2" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="header-tools">
+          <a
+            class="brand"
+            href="../../index.html"
+            aria-label="Yu-Chi Hou home"
+            title="Home"
+          >
+            <img
+              src="../../apple-touch-icon.png?v=4"
+              alt=""
+              width="38"
+              height="38"
+            />
+          </a>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            title="Change theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          </button>
+        </div>
+
+        <nav aria-label="Primary navigation">
+          <a href="../../index.html">Home</a>
+          <a href="../../research.html">Research</a>
+          <a href="../../activities.html">Activities</a>
+          <a href="../../misc.html" aria-current="page">Misc</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="review-page">
+      <article class="review-post essay-post" aria-labelledby="essay-title">
+        <a class="review-back" href="../../misc.html">← Back to Misc</a>
+
+        <header class="review-post-header">
+          <p class="section-kicker">Essay</p>
+          <h1 id="essay-title">Some Thoughts on AI4Math</h1>
+          <p class="review-meta">Yu-Chi Hou · October 12, 2026</p>
+          <p><a href="./" lang="zh-Hant" hreflang="zh-Hant">中文版</a></p>
+        </header>
+
+        <div class="review-body">
+<p><strong>AI disclosure:</strong> I first wrote this essay in English and then translated it into Chinese. I used ChatGPT to help organize and refine the argument, polish the English, translate the text, and format the references as endnotes for the Chinese version.</p>
+
+<section aria-labelledby="section-1">
+<h2 id="section-1">The Bomb at Dinner</h2>
+
+<p>The bomb dropped between the appetizer and the main course. We were at a seminar dinner: my advisor, another faculty member, a few graduate students, including me, and the speaker—who was my advisor’s advisor. What made it all the more ironic was that he had originally planned to speak about his own progress on Griffiths’ conjecture. But after two groups found counterexamples with the help of AI in late September, he ended up presenting their work instead. When we heard the siren, I put down my fork, grabbed my phone, and found the newly released document on GitHub. I scanned the list of victims: log abundance, Fujita’s conjecture, Mahler’s conjecture, and—oh—yet another counterexample to Griffiths’ conjecture. I knew the OpenAI drop was coming, but seeing it actually happen still felt surreal. I wondered how many mathematicians who heard the news slept comfortably that night.</p>
+
+<p>For me, AI’s formidable theorem-proving capabilities had been clear since the summer. It had picked up on techniques I had overlooked and helped advance an important special case of my problem. I wrote about that experience <a href="https://yu-chihou.github.io/essays/half-vibe-mathematician/english.html">here</a>, on the day Astra launched. A few days later, on the day OpenAI announced its Navier–Stokes result, I came across David Bessis’ fascinating essay, <a href="https://davidbessis.substack.com/p/the-fall-of-the-theorem-economy"><em>The Fall of the Theorem Economy</em></a>. It offers a profound philosophical analysis of the changes unfolding around us, and I agree with almost all of its arguments. But as a PhD student, I find that a discussion at the metaphysical level does little to ease my anxiety. When my friends and I discuss this, the question we keep coming back to is: <em>What should we do?</em> We also need a more down-to-earth conversation, yet the noise surrounding this topic—from both mathematicians and the wider public—only makes that conversation harder to have.</p>
+
+</section>
+
+<section aria-labelledby="section-2">
+<h2 id="section-2">Facing Reality</h2>
+
+<p>In the wake of OpenAI’s Navier–Stokes announcement, 28 Fields Medalists released the declaration <a href="https://mathandai.org/"><em>A Severe Misalignment of AI in Mathematics</em></a>. Their main concern is that the race to solve problems can undermine the work needed to turn those results into shared mathematical understanding. I endorsed the declaration, and I still support its central argument. At the same time, I have heard some colleagues express the hope that AI companies will eventually lose interest in mathematics and leave us to return to the good old days. I understand the sentiment, but I do not think we can build our response around that hope.</p>
+
+<p>Let’s face it—there’s no going back.</p>
+
+<p>A month after the declaration, one thing is clear: no matter how many declarations we issue or how many mathematicians endorse them, we cannot count on a leading firm in an industry expected to attract <a href="https://www.goldmansachs.com/insights/articles/global-investment-is-forecast-to-exceed-1-trillion-in-2026">around a trillion dollars in investment this year</a> to change course simply because the mathematical community objects. Even if OpenAI or Anthropic declare that “MATH IS SOLVED” and move on, plenty of other companies will be eager to flex their muscles in our field. These companies are not the intended audience of this essay. Mathematicians have directed much of their energy and anger at AI companies, but the problem also exists within our community. Since the summer, I have seen some mathematicians flooding arXiv with AI slop, some without even disclosing their use of AI.</p>
+
+<p>Before going further, I should address a common reaction to the mathematical community’s concerns: if proving theorems is the goal of mathematics, and AI can produce verified proofs better than humans can, why should mathematicians be upset? Are we just Luddites who cannot accept the arrival of the singularity?</p>
+
+<p>Let me borrow Bessis’ words in response:</p>
+
+<blockquote><p>The problem with unintelligible mathematics isn’t that it might be false. It is that it is literally meaningless, in the sense that it doesn’t compile on the only hardware that is currently able to make sense of it and appreciate its value—the human brain. This, of course, could change in the not-so-distant future. […] Artificial sense-making and truth-seeking architectures will certainly emerge, and at some point they will probably surpass humans on all aspects of mathematical creativity, including the canonization of formal proofs […]. Yet this is absolutely not our present—nor a straightforward continuation of current trends […].</p></blockquote>
+
+<p>Whatever capabilities AI may eventually develop, as long as humans continue to care about mathematics, <strong>building and sharing human understanding</strong> will remain a central purpose of the discipline. Thurston expressed this purpose clearly:</p>
+
+<blockquote><p>We are not trying to meet some abstract production quota of definitions, theorems and proofs. The measure of our success is whether what we do enables people to understand and think more clearly and effectively about mathematics.</p></blockquote>
+
+<p>With this goal in mind, the institutional concerns raised in Daniel Litt’s <a href="https://www.daniellitt.com/blog/2026/8/11/the-end-of-mathematics/">essay</a> become urgent. We need to examine how our own institutions and culture encourage the race to claim results, and what we can change to help mathematics remain a sustainable scientific discipline as AI advances. We need systemic changes to our institutions and a shift in our own mindset. Without both, I see no clear path to a sustainable future for mathematics or for those entering the field. If we cannot agree within our own community on what we value and how our culture should change, it will be even harder to make a convincing public case for continued investment in mathematical research and education.</p>
+
+</section>
+
+<section aria-labelledby="section-3">
+<h2 id="section-3">When the Proxy Stops Working</h2>
+
+<p>Proving a substantial theorem has long served as a proxy for the mathematical effort behind it: developing concepts, recognizing patterns, connecting different fields, and finding ways around obstacles. We could not directly measure all of these contributions, but a substantial theorem gave us something concrete to recognize and reward. Priority, publications, and journal prestige became central to how we evaluate mathematicians. David Bessis pinpoints the culture behind this system:</p>
+
+<blockquote><p>Definitions are worth zero points, expository work counts negative, and the best jobs should always go to the people who proved the hardest theorems… They lament the system’s pathological obsession with theorem-proving priority, while everyone knows the hard work often takes place outside of that loop, when trying to make sense of existing results. Yet, in public, they are bound by the honor code of mathematicians. Prove theorems and shut up!</p></blockquote>
+
+<p>This arrangement was always imperfect. As I discussed in my earlier essay, explaining, simplifying, and organizing mathematics often received less recognition than proving a new result (see Hardy’s remarks quoted in Bessis’ essay). Yet the system still left room for mathematicians whose contributions took different forms, including those who did not make theorem-proving their sole priority. Producing a result and developing the understanding behind it remained closely connected.</p>
+
+<p>AI puts that connection under pressure. In his <a href="https://www.quantamagazine.org/the-ai-revolution-in-math-has-arrived-20260413/">mountain-climbing analogy</a>, Terence Tao compared AI systems to jumping robots that could “parkour their way to the top of a 6-foot wall.” To extend his analogy, today’s LLMs may already be—or may soon become—helicopters capable of carrying us to some of those summits. Reaching the top would then tell us much less about our ability to climb. Likewise, a theorem announced under someone’s name now tells us less, by itself, about what that person contributed or understood.</p>
+
+<p>If the current incentive structure remains unchanged, we should expect more people to keep pulling the lever on the AI slot machine, racing to claim whatever results it produces. They may have little incentive to examine the arguments, identify useful ideas, or turn the output into something others can use and learn from. Community disapproval alone may simply encourage them to conceal their use of AI and present the work as their own. As models improve—or as authors put more effort into disguising their output—the signs we currently associate with AI-generated writing may become harder to recognize. We cannot build a sustainable system around spotting those signs.</p>
+
+<p>If this trend continues, we risk turning the whole field into a nuclear wasteland: a growing mass of claims that the community lacks the time or incentive to examine, where reliable results become increasingly difficult to distinguish from unsupported assertions. Even when a proof has been formally verified, the work needed to understand its ideas and make them usable by other researchers—or by AI systems—may remain undone.</p>
+
+<p>This also raises a question about AI’s own future development. Today’s LLMs draw on a mathematical literature that humans have spent centuries developing and curating. We should not simply assume that their mathematical capabilities will continue to improve if that literature becomes a wasteland of AI slop.</p>
+
+</section>
+
+<section aria-labelledby="section-4">
+<h2 id="section-4">What Should We Do?</h2>
+
+<p>Returning to the question that prompted this essay, I do not think anyone has a definitive and comprehensive answer. The habits and expectations of the old order are deeply ingrained, both within our profession and in the public’s understanding of mathematics. As Bessis puts it:</p>
+
+<blockquote><p>This might be the largest product recall in memory—we sold a bogus idea of math to billions of people, and the bill is coming due.</p></blockquote>
+
+<p>Bessis closes his essay by exploring several possible directions. Here, I would like to offer four more concrete, preliminary suggestions, from the perspective of a PhD student whose future depends on how our community responds.</p>
+
+<h3>First, <strong>reshape the reward system and incentive structure</strong>.</h3>
+
+<p>We should place less emphasis on theorem-proving priority and give greater recognition to explanation, exposition, and the integration of results into shared mathematical knowledge. Whether we are working with AI output we generated ourselves or material produced by someone else, examining the arguments, repairing gaps, extracting concepts, writing clear accounts, and giving talks that explain the discoveries are mathematical contributions in their own right. These contributions should bring credit, recognition, and career opportunities.</p>
+
+<p>In my previous essay, I discussed Hironaka’s resolution of singularities as an example. I would now add Philip Engel’s work on explaining complex structures on S⁶, through both his <a href="https://arxiv.org/abs/2609.38442">expository paper</a> and his <a href="https://video.renyi.hu/video/workshop-on-moduli-of-curves-abelian-varieties-and-k3-surfaces-1-1043">talks</a>. As my advisor and I discussed just this week, one practical starting point could be to choose an AI-generated manuscript that interests us—from OpenAI’s recent batch or elsewhere—and organize an “AI slop reading seminar.” Working through the arguments together, identifying what holds up, and writing down what we learn would already be a contribution worth recognizing. Some people are already doing this work, but we need more people to join them.</p>
+
+<p>This shift could make researchers more comfortable using AI openly and give them more reason to disclose that use honestly: their contribution would no longer depend on maintaining the impression that they proved everything themselves. It could also reduce the damage caused by companies racing to claim results, because worthwhile work would remain available and rewarded after the announcement. Our discussions could then focus more directly on the mathematics: How does the argument work? What have we learned, and what had we previously overlooked? Where could these ideas lead us?</p>
+
+<h3>Second, <strong>make our institutions support these contributions.</strong></h3>
+
+<p>Senior mathematicians, especially those who influence institutional decisions, should seriously consider how peer review, hiring, and promotion should work under this framework. For those without tenure, this is perhaps the most immediate source of anxiety. Whatever we believe mathematics should strive for, our careers still depend on what institutions actually reward.</p>
+
+<p>I do not yet have the experience to propose a fully developed institutional alternative. But when senior mathematicians speak about keeping young people in the field, I hope these questions will be among their priorities. We should also recognize and reward those who take on the responsibility of making these changes happen.</p>
+
+<p>At a minimum, during the transition toward a revised peer-review system, hiring and promotion should rely less heavily on publication counts and journal prestige. Talks and substantive mathematical discussions could provide more direct evidence of a researcher’s understanding and contributions, as Litt argues in his <a href="https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/">more optimistic essay</a>. In doctoral education, the recent <a href="https://cmsa.fas.harvard.edu/media/2026/09/Summit-on-PhD-Math-Education-in-the-Age-of-AI.pdf">Report</a> similarly recommends rigorous in-person assessments and thesis defenses, rather than relying primarily on written work as evidence of understanding.</p>
+
+<p>These assessments will also be imperfect. They may be more subjective and harder to conduct. But as our familiar indicators become less informative and the peer-review system faces increasing pressure, we may need to give such assessments greater weight despite these limitations.</p>
+
+<h3>Third, <strong>explore new ways of doing mathematics.</strong></h3>
+
+<p>LLMs may make forms of research and collaboration feasible that previously seemed out of reach. For example, they may suggest advanced mathematical tools to researchers in other sciences who lack the background to understand those tools. Mathematicians can help explain how they work, clarify their assumptions and limitations, and adapt or improve them for the problems at hand. Through this process, we may bring more mathematics into wider scientific use and discover new mathematical questions along the way. The opportunity also runs in the other direction. LLMs may help us learn the language, background, and methods of other fields, lowering barriers that once made interdisciplinary collaboration difficult.</p>
+
+<p>The mathematics brought into these collaborations may also extend beyond what is traditionally classified as applied mathematics, creating opportunities for researchers who think of themselves as pure mathematicians. Such exchanges could blur the line between pure and applied mathematics, bringing questions from other sciences into areas where research has largely been driven by questions within mathematics itself. We should be more willing to explore unfamiliar questions, step outside our comfort zones and work with researchers in other fields, and experiment with different forms of mathematical research.</p>
+
+<h3><strong>Fourth, invest more in education and public communication.</strong></h3>
+
+<p>We need to explain to the public what mathematical research involves, how it contributes to our understanding of the world, and what mathematicians can do in an age of increasingly capable AI. We also need to articulate the cultural, technological, and intellectual value of humans doing mathematics. Making that value clear helps counter the rhetoric that dismisses mathematicians’ concerns about AI as mere professional gatekeeping.</p>
+
+<p>This effort also belongs in the classroom. Students deserve a convincing explanation of why learning mathematics matters when a machine can produce answers for them. As Bessis puts it:</p>
+
+<blockquote><p>What concerns me is the false belief that there is a “normal” level of mathematical competency, as if certain concepts were any more “real” or “concrete” than the others, and advanced mathematics was gratuitously abstract. […] Some prophesy that mathematics will eventually resemble Chess […] This is a shortsighted view that fails to account for the meaning-making and truth-seeking dimensions of mathematics, as well as the massive cognitive benefits of mathematical training. The world makes a lot more sense once you have an intuitive understanding of numbers, sets, statistics, linear algebra, calculus, differential geometry, machine learning […].</p></blockquote>
+
+<p>Our teaching practices should help students experience these benefits as the tools available to them change. This effort should not be confined to college; it should begin as early as elementary school, where some children already begin to dislike mathematics. Alongside practice with routine calculations, students need opportunities to explore patterns, ask questions, and discover how mathematical ideas can make the world more intelligible.</p>
+
+</section>
+
+<section aria-labelledby="section-5">
+<h2 id="section-5">We Cannot Afford to Wait</h2>
+
+<p>The <a href="https://www.nytimes.com/2026/10/02/us/politics/national-science-foundation-research-funds.html">public climate</a> surrounding basic science leaves us little room for complacency. We need to face reality and move more quickly. We need institutions that support people in understanding, developing, and sharing mathematics as the tools of research change. For those of us still building our careers, how soon these changes happen will help determine whether we can remain in mathematics at all.</p>
+
+</section>
+
+        </div>
+      </article>
+    </main>
+
+    <script src="../../theme.js?v=20260809-6" defer></script>
+
+    <script
+      data-goatcounter="https://coryhou.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
+  </body>
+</html>
+

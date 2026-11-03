@@ -27,6 +27,9 @@ root. Use this pattern for new pages:
 - `reviews/books/<slug>/index.html`: book reviews
 - `reviews/albums/<slug>/index.html`: album reviews
 - `reviews/films/<slug>/index.html`: film reviews
+- `visualizations/<slug>/index.html`: interactive mathematical illustrations;
+  keep page-specific scripts and styles in the same folder, link the page from
+  Research or the relevant seminar, and add its canonical URL to `sitemap.xml`
 
 The `<slug>` should be a short, lowercase, hyphen-separated name. For example,
 the review of *Elected American* lives at

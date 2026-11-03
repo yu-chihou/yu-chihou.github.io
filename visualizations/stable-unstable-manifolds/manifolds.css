@@ -1,0 +1,108 @@
+.manifold-post {
+  width: min(1000px, 100%);
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+.manifold-post .review-back { margin-bottom: 1.75rem; }
+.manifold-post h1 { max-width: 23ch; font-size: clamp(2rem, 5vw, 3rem); }
+.manifold-intro { max-width: 76ch; margin: 1.25rem 0 0; color: var(--body-copy); }
+
+#manifold-flow-visual {
+  --background: var(--paper);
+  --muted-foreground: var(--muted);
+  --border: var(--rule);
+  --viz-series-1: var(--blue);
+  --viz-series-2: #b66c37;
+  width: 100%;
+  color: var(--foreground);
+  font-size: 0.9375rem;
+}
+
+html[data-theme="dark"] #manifold-flow-visual { --viz-series-2: #f1ab79; }
+.manifold-post h2 { margin: 0 0 1rem; font-size: 1.35rem; line-height: 1.35; }
+.manifold-help { margin: 0 0 1.1rem; color: var(--muted); }
+.manifold-controls { display: flex; flex-wrap: wrap; gap: 0.85rem 1.5rem; }
+.manifold-controls > label { display: grid; flex: 1 1 240px; gap: 0.3rem; font-weight: 600; }
+.manifold-controls select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0.55rem 2rem 0.55rem 0.7rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--foreground);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.manifold-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem; margin-top: 1rem; }
+.manifold-check { display: inline-flex; min-height: 44px; align-items: center; gap: 0.4rem; cursor: pointer; }
+.manifold-check input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--accent-dark); }
+.manifold-swatch { display: inline-block; width: 26px; height: 0; flex: 0 0 26px; }
+.manifold-swatch.stable { border-top: 3px solid var(--viz-series-1); }
+.manifold-swatch.unstable { border-top: 3px dashed var(--viz-series-2); }
+#manifold-flow-visual button {
+  min-height: 44px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.45rem 0.8rem;
+  background: var(--paper);
+  color: var(--accent-dark);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+#manifold-flow-visual button:hover { border-color: var(--accent); background: var(--hover-bg); }
+#manifold-flow-visual button:disabled { opacity: 0.5; cursor: default; }
+#manifold-flow-visual :is(button, input, select):focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.manifold-stage { width: 100%; margin-top: 0.25rem; }
+:is(#torus-canvas, #sphere-canvas) { display: block; width: 100%; height: 510px; touch-action: pan-y; cursor: grab; }
+:is(#torus-canvas, #sphere-canvas).dragging { cursor: grabbing; }
+.manifold-view-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+.manifold-key { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.9rem; color: var(--muted); font-size: 0.82rem; }
+.manifold-hollow { display: inline-block; width: 8px; height: 8px; margin-right: 0.2rem; border: 1.5px solid var(--foreground); border-radius: 50%; }
+:is(#torus-cut-key, #sphere-cut-key)[hidden] { display: none; }
+:is(#torus-detail, #sphere-detail) { margin: 0.65rem 0 0; font-size: 0.87rem; }
+.manifold-probe { position: absolute; visibility: hidden; pointer-events: none; }
+
+.manifold-explanation { margin-top: 2.5rem; color: var(--body-copy); }
+.manifold-explanation > section { max-width: 78ch; margin-top: 2rem; }
+.manifold-explanation p { margin: 0 0 1rem; }
+.manifold-explanation h2 { color: var(--foreground); }
+.manifold-definitions { display: grid; gap: 0.9rem; margin: 1.5rem 0; }
+.manifold-definitions math { margin: 0; font-size: 1.08em; }
+.manifold-coordinates { margin-top: 2.25rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.manifold-coordinates summary { padding: 1rem 0; color: var(--foreground); font-size: 1.1rem; font-weight: 600; cursor: pointer; }
+.manifold-coordinates summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.manifold-coordinates > div { padding: 0.5rem 0 1rem; }
+.manifold-formula { overflow-x: auto; margin: 1.25rem 0; padding: 0.25rem 0; }
+.manifold-formula math { width: max-content; min-width: 100%; margin: 0; }
+.manifold-equations { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2rem; margin: 1.25rem 0; }
+.manifold-equations math { margin: 0; }
+.manifold-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.manifold-table { width: 100%; border-collapse: collapse; font-size: 0.91rem; }
+.manifold-table caption { margin-bottom: 0.7rem; color: var(--muted); text-align: left; }
+.manifold-table th, .manifold-table td { padding: 0.7rem 0.6rem; border-bottom: 1px solid var(--rule); text-align: left; }
+.manifold-table th { color: var(--foreground); font-weight: 600; }
+.manifold-table td { white-space: normal; }
+.manifold-table th[scope="row"] { white-space: nowrap; }
+.manifold-related { margin-top: 2rem; }
+.manifold-credit { color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 560px) {
+  :is(#torus-canvas, #sphere-canvas) { height: 390px; }
+  .manifold-legend { gap: 0.25rem 1rem; }
+  .manifold-view-buttons { gap: 0.4rem; }
+  #manifold-flow-visual .manifold-view-buttons button { padding-inline: 0.6rem; font-size: 0.85rem; }
+  .manifold-definitions math { font-size: 1em; }
+}
+
+.manifold-renderer[hidden] { display: none !important; }
+.manifold-surface-control { margin-bottom: 1rem; }
+.manifold-reading-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-bottom: 2rem; font-size: 0.9rem; }
+.manifold-reading-links a { color: var(--accent-dark); }
+.manifold-motion-note { margin: 0.4rem 0 0; color: var(--muted); font-size: 0.78rem; }
+.manifold-coordinate-table td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.manifold-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.manifold-explanation :is(h2, details) { scroll-margin-top: 5rem; }

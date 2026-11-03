@@ -1,0 +1,101 @@
+.sphere-post {
+  width: min(1000px, 100%);
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+.sphere-post .review-back { margin-bottom: 1.75rem; }
+.sphere-post h1 { max-width: 23ch; font-size: clamp(2rem, 5vw, 3rem); }
+.sphere-intro { max-width: 76ch; margin: 1.25rem 0 0; color: var(--body-copy); }
+
+#sphere-flow-visual {
+  --background: var(--paper);
+  --muted-foreground: var(--muted);
+  --border: var(--rule);
+  --viz-series-1: var(--blue);
+  --viz-series-2: #b66c37;
+  width: 100%;
+  color: var(--foreground);
+  font-size: 0.9375rem;
+}
+
+html[data-theme="dark"] #sphere-flow-visual { --viz-series-2: #f1ab79; }
+.sphere-post h2 { margin: 0 0 1rem; font-size: 1.35rem; line-height: 1.35; }
+.sphere-help { margin: 0 0 1.1rem; color: var(--muted); }
+.sphere-controls { display: flex; flex-wrap: wrap; gap: 0.85rem 1.5rem; }
+.sphere-controls > label { display: grid; flex: 1 1 240px; gap: 0.3rem; font-weight: 600; }
+.sphere-controls select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0.55rem 2rem 0.55rem 0.7rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--foreground);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.sphere-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem; margin-top: 1rem; }
+.sphere-check { display: inline-flex; min-height: 44px; align-items: center; gap: 0.4rem; cursor: pointer; }
+.sphere-check input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--accent-dark); }
+.sphere-swatch { display: inline-block; width: 26px; height: 0; flex: 0 0 26px; }
+.sphere-swatch.stable { border-top: 3px solid var(--viz-series-1); }
+.sphere-swatch.unstable { border-top: 3px dashed var(--viz-series-2); }
+#sphere-flow-visual button {
+  min-height: 44px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.45rem 0.8rem;
+  background: var(--paper);
+  color: var(--accent-dark);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+#sphere-flow-visual button:hover { border-color: var(--accent); background: var(--hover-bg); }
+#sphere-flow-visual button:disabled { opacity: 0.5; cursor: default; }
+#sphere-flow-visual :is(button, input, select):focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.sphere-stage { width: 100%; margin-top: 0.25rem; }
+#sphere-canvas { display: block; width: 100%; height: 510px; touch-action: pan-y; cursor: grab; }
+#sphere-canvas.dragging { cursor: grabbing; }
+.sphere-view-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+.sphere-key { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.9rem; color: var(--muted); font-size: 0.82rem; }
+.sphere-hollow { display: inline-block; width: 8px; height: 8px; margin-right: 0.2rem; border: 1.5px solid var(--foreground); border-radius: 50%; }
+#sphere-cut-key[hidden] { display: none; }
+#sphere-detail { margin: 0.65rem 0 0; font-size: 0.87rem; }
+.sphere-probe { position: absolute; visibility: hidden; pointer-events: none; }
+
+.sphere-explanation { margin-top: 2.5rem; color: var(--body-copy); }
+.sphere-explanation > section { max-width: 78ch; margin-top: 2rem; }
+.sphere-explanation p { margin: 0 0 1rem; }
+.sphere-explanation h2 { color: var(--foreground); }
+.sphere-definitions { display: grid; gap: 0.9rem; margin: 1.5rem 0; }
+.sphere-definitions math { margin: 0; font-size: 1.08em; }
+.sphere-coordinates { margin-top: 2.25rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.sphere-coordinates summary { padding: 1rem 0; color: var(--foreground); font-size: 1.1rem; font-weight: 600; cursor: pointer; }
+.sphere-coordinates summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.sphere-coordinates > div { padding: 0.5rem 0 1rem; }
+.sphere-formula { overflow-x: auto; margin: 1.25rem 0; padding: 0.25rem 0; }
+.sphere-formula math { width: max-content; min-width: 100%; margin: 0; }
+.sphere-equations { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 2rem; margin: 1.25rem 0; }
+.sphere-equations math { margin: 0; }
+.sphere-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.sphere-table { width: 100%; border-collapse: collapse; font-size: 0.91rem; }
+.sphere-table caption { margin-bottom: 0.7rem; color: var(--muted); text-align: left; }
+.sphere-table th, .sphere-table td { padding: 0.7rem 0.6rem; border-bottom: 1px solid var(--rule); text-align: left; }
+.sphere-table th { color: var(--foreground); font-weight: 600; }
+.sphere-table td { white-space: normal; }
+.sphere-table th[scope="row"] { white-space: nowrap; }
+.sphere-coordinate-table td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.sphere-motion-note { margin: 0.4rem 0 0; color: var(--muted); font-size: 0.78rem; }
+.sphere-related { margin-top: 2rem; }
+.sphere-credit { color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 560px) {
+  #sphere-canvas { height: 390px; }
+  .sphere-legend { gap: 0.25rem 1rem; }
+  .sphere-view-buttons { gap: 0.4rem; }
+  #sphere-flow-visual .sphere-view-buttons button { padding-inline: 0.6rem; font-size: 0.85rem; }
+  .sphere-definitions math { font-size: 1em; }
+}
